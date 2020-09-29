@@ -24,7 +24,7 @@ Añadimos al agente ssh la clave privada:
 
 Copiamos la clave pública
 
-![](imagenes/copiar clave pública.png)
+![](imagenes/copiar_clave_publica.png)
 
 Y la pegamos en GitHub:
 
