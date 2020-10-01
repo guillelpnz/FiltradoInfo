@@ -6,7 +6,7 @@ El hito 0 trata sobre la puesta en marcha de las herramientas necesarias para el
 
 Git ya configurado con nombre y correo:
 
-![](imagenes/capt.png)
+![](~/imagenes/capt.png)
 
 ## Añadir una clave pública a GitHub
 
