@@ -1,7 +1,7 @@
 {
   "name": "filtradoinfo",
   "version": "1.0.0",
-  "description": "API REST that helps users analyse and filter texts. It's main purpose is to assay political speeches.",
+  "description": "API REST that helps users analyse and filter texts. Its main purpose is to assay political speeches.",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/guillelpnz/FiltradoInfo.git"
   },
   "author": "Guillermo Lupiáñez Tapia",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/guillelpnz/FiltradoInfo/issues"
   },
