@@ -22,10 +22,10 @@ Para conocer los pasos seguidos para la realización del proyecto [haz click aqu
 
 ## Historias de usuario para el hito 1
 
-[HU1 - El usuario obtiene las palabras redundantes de un texto](/guillelpnz/TextAnalyzer/issues/7)
+[HU1 - El usuario obtiene las palabras redundantes de un texto](github.com/guillelpnz/TextAnalyzer/issues/7)
 
-[HU2 - El usuario introduce un texto en la base de datos](/guillelpnz/TextAnalyzer/issues/8)
+[HU2 - El usuario introduce un texto en la base de datos](github.com/guillelpnz/TextAnalyzer/issues/8)
 
-[HU3 - El usuario obtiene las referencias a personas dentro de un texto](/guillelpnz/TextAnalyzer/issues/9)
+[HU3 - El usuario obtiene las referencias a personas dentro de un texto](github.com/guillelpnz/TextAnalyzer/issues/9)
 
-[HU4 - El usuario obtiene el discurso de una celebridad de la base de datos](/guillelpnz/TextAnalyzer/issues/10)
+[HU4 - El usuario obtiene el discurso de una celebridad de la base de datos](github.com/guillelpnz/TextAnalyzer/issues/10)
