@@ -20,7 +20,7 @@ Para conocer la configuración previa de git [haz click aquí](docs/documentacio
 
 Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md)
 
-## Historias de usuario
+## Historias de usuario para el hito 1
 
 [HU1 - El usuario obtiene las palabras redundantes de un texto](issues/7)
 
