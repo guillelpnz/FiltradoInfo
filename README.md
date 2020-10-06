@@ -20,7 +20,7 @@ Para conocer la configuración previa de git [haz click aquí](docs/documentacio
 
 Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md)
 
-## Historias de usuario para el hito 1
+## Historias de usuario
 
 [HU1 - El usuario obtiene las palabras redundantes de un texto](https://github.com/guillelpnz/TextAnalyzer/issues/7)
 
