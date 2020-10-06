@@ -15,3 +15,17 @@ El lenguaje que se va a utilizar es Node. Para conocer el resto de herramientas 
 ## Configuración
 
 Para conocer la configuración previa de git [haz click aquí](docs/documentacion.md)
+
+## Pasos seguidos para desarrollar el proyecto
+
+Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md)
+
+## Historias de usuario
+
+[HU1 - El usuario obtiene las palabras redundantes de un texto](issues/7)
+
+[HU2 - El usuario introduce un texto en la base de datos](issues/8)
+
+[HU3 - El usuario obtiene las referencias a personas dentro de un texto]((issues/9))
+
+[HU4 - El usuario obtiene el discurso de una celebridad de la base de datos](issues/10)
