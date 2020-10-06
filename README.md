@@ -26,6 +26,6 @@ Para conocer los pasos seguidos para la realización del proyecto [haz click aqu
 
 [HU2 - El usuario introduce un texto en la base de datos](issues/8)
 
-[HU3 - El usuario obtiene las referencias a personas dentro de un texto]((issues/9))
+[HU3 - El usuario obtiene las referencias a personas dentro de un texto](issues/9)
 
 [HU4 - El usuario obtiene el discurso de una celebridad de la base de datos](issues/10)
