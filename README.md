@@ -6,7 +6,7 @@ Durante el trayecto que llevo recorrido de carrera, he tenido que hacer numerosa
 
 ## Descripción
 
-El proyecto consiste en una API REST que revisa textos de todo tipo, pudiendo encontrar así poder encontrar redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos).
+El proyecto consiste en una API REST que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos).
 
 ## Herramientas utilizadas
 
