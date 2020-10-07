@@ -10,7 +10,7 @@ El proyecto consiste en una API REST que revisa textos de todo tipo, pudiendo en
 
 ## Herramientas utilizadas
 
-El lenguaje que se va a utilizar es Node. Para conocer el resto de herramientas [haz click aquí](docs/herramientas.md)
+El lenguaje que se va a utilizar es Go. Para conocer el resto de herramientas [haz click aquí](docs/herramientas.md)
 
 ## Configuración
 
