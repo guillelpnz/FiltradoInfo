@@ -29,5 +29,3 @@ Copiamos la clave pública
 Y la pegamos en GitHub:
 
 ![](imagenes/clave_publica_copiada.png)
-
-

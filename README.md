@@ -20,6 +20,10 @@ Para conocer la configuración previa de git [haz click aquí](docs/documentacio
 
 Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md)
 
+## Interfaz hasta hito 1
+
+[Acceder al archivo](src/texto.go)
+
 ## Historias de usuario
 
 [HU1 - El usuario obtiene las palabras redundantes de un texto](https://github.com/guillelpnz/TextAnalyzer/issues/7)
