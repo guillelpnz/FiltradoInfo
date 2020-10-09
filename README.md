@@ -24,6 +24,10 @@ Para conocer los pasos seguidos para la realización del proyecto [haz click aqu
 
 [Acceder al archivo](src/texto.go)
 
+## Archivo iv.yaml
+
+[Acceder al archivo](iv.yaml)
+
 ## Historias de usuario
 
 [HU1 - El usuario obtiene las palabras redundantes de un texto](https://github.com/guillelpnz/TextAnalyzer/issues/7)
