@@ -21,6 +21,7 @@ Para conocer la configuración previa de git [haz click aquí](docs/documentacio
 Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md)
 
 ## Interfaz inicial
+
 [Acceder al archivo](src/texto.go)
 
 ## Archivo iv.yaml
