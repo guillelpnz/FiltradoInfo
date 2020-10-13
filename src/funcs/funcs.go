@@ -1,4 +1,4 @@
-package texto
+package funcs
 
 func limpiar(texto string) string {
 	signosPuntuacion := `.;:,"!¡?¿*-<>()|`
