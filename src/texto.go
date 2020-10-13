@@ -2,6 +2,7 @@ package texto
 
 import (
 	"fmt"
+	"github.com/guillelpnz/TextAnalyzer/src/funcs/funcs.go"
 )
 
 type texto struct {
