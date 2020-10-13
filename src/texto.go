@@ -2,7 +2,6 @@ package texto
 
 import (
 	"fmt"
-	"github.com/guillelpnz/TextAnalyzer/src/funcs/funcs.go"
 )
 
 type texto struct {
@@ -43,7 +42,7 @@ func (t *texto) SetAutor(autor string) {
 }
 
 func (t *texto) ObtenerRedundantes() []string {
-	texto := funcs.limpiar(t.contenido)
+	texto := limpiar(t.contenido)
 
 	redundantes := make([]string, 1)
 
