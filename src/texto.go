@@ -41,10 +41,12 @@ func (t *texto) SetAutor(autor string) {
 	t.autor = autor
 }
 
-func (t *texto) ObtenerRedundantes() string {
-	texto := funcs.limpiar(t.contenido)
+func (t *texto) ObtenerRedundantes() []string {
+	texto := limpiar(t.contenido)
 
 	redundantes := make([]string, 1)
+
+	redundantes.append()
 
 	return redundantes
 }
