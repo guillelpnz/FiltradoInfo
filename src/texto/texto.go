@@ -42,7 +42,7 @@ func (t *texto) SetAutor(autor string) {
 }
 
 func (t *texto) ObtenerRedundantes() string {
-	texto := limpiar(contenido)
+	texto := funcs.limpiar(t.contenido)
 
 	redundantes := make([]string, 1)
 
