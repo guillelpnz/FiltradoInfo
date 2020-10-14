@@ -22,3 +22,13 @@ func TestLimpiar(t *testing.T) {
 		t.Error("Limpiar no funciona adecuadamente")
 	}
 }
+
+func TestContainsPalabra(t *testing.T) {
+	var cadena string
+
+	cadena = "Hola me llamo Guille"
+
+	if !containsPalabra(cadena, "me") {
+		t.Error("ContainsPalabra no funciona adecuadamente")
+	}
+}
