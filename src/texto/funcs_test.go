@@ -32,7 +32,7 @@ func TestContainsPalabra(t *testing.T) {
 	slice[2] = "llamo"
 	slice[3] = "Guillermo"
 
-	if !ContainsPalabra(slice, "me") {
+	if !ContainsPalabra(slice, "Guillermo") {
 		t.Error("ContainsPalabra no funciona adecuadamente")
 	}
 }
