@@ -5,7 +5,7 @@ import "testing"
 func TestContains(t *testing.T) {
 	cadena := "Hola!"
 
-	if !contains(cadena, '!') {
+	if contains(cadena, '!') {
 		t.Error("Contains no funciona adecuadamente")
 	} else {
 		t.Log("Contains funciona adecuadamente")
