@@ -51,8 +51,8 @@ func TestStringToSlice(t *testing.T) {
 	correcto[6] = "prueba"
 
 	for i, palabra := range stringToSlice(cadena1) {
-		if (palabra) != correcto[i] {
-			t.Error("StringToSlice no funciona adecuadamente")
+		if (palabra != correcto[i] {
+			t.Error("StringToSlice no funciona adecuadamente %v", palabra)
 			break
 		}
 	}
