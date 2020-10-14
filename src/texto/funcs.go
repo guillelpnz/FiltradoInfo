@@ -1,11 +1,12 @@
 package texto
 
-func limpiar(texto string) string {
+//Limpiar returns a string without punctuation marks
+func Limpiar(texto string) string {
 	signosPuntuacion := `.;:,"!¡?¿*-<>()|`
 	var limpiada string
 
 	for _, char := range texto {
-		if !contains(signosPuntuacion, char) {
+		if !Contains(signosPuntuacion, char) {
 			limpiada = limpiada + string(char)
 		}
 	}
@@ -13,7 +14,8 @@ func limpiar(texto string) string {
 	return limpiada
 }
 
-func contains(haystack string, needle rune) bool {
+// Contains returns true if needle is in haystack
+func Contains(haystack string, needle rune) bool {
 	for _, char := range haystack {
 		if needle == char {
 			return true
@@ -22,7 +24,8 @@ func contains(haystack string, needle rune) bool {
 	return false
 }
 
-func containsPalabra(haystack []string, needle string) bool {
+// ContainsPalabra returns true if needle is in haystack
+func ContainsPalabra(haystack []string, needle string) bool {
 	for _, palabra := range haystack {
 		if needle == palabra {
 			return true
@@ -32,7 +35,8 @@ func containsPalabra(haystack []string, needle string) bool {
 	return false
 }
 
-func stringToSlice(texto string) []string {
+//StringToSlice returns a slice from a string
+func StringToSlice(texto string) []string {
 	slice := make([]string, 1)
 	var palabra string
 

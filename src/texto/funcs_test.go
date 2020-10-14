@@ -6,7 +6,7 @@ func TestContains(t *testing.T) {
 	var cadena string
 	cadena = "Hola!"
 
-	if !contains(cadena, '!') {
+	if !Contains(cadena, '!') {
 		t.Error("Contains no funciona adecuadamente")
 	}
 }
@@ -16,7 +16,7 @@ func TestLimpiar(t *testing.T) {
 	cadena = "¡¡Hola!! Mi nombre es Guille."
 	correcta = "Hola Mi nombre es Guille"
 
-	cadena = limpiar(cadena)
+	cadena = Limpiar(cadena)
 
 	if cadena != correcta {
 		t.Error("Limpiar no funciona adecuadamente")
@@ -32,7 +32,7 @@ func TestContainsPalabra(t *testing.T) {
 	slice[2] = "llamo"
 	slice[3] = "Guillermo"
 
-	if !containsPalabra(slice, "me") {
+	if !ContainsPalabra(slice, "me") {
 		t.Error("ContainsPalabra no funciona adecuadamente")
 	}
 }
@@ -50,7 +50,7 @@ func TestStringToSlice(t *testing.T) {
 	correcto[5] = "de"
 	correcto[6] = "prueba"
 
-	for i, palabra := range stringToSlice(cadena1) {
+	for i, palabra := range StringToSlice(cadena1) {
 		if palabra != correcto[i] {
 			t.Error("StringToSlice no funciona adecuadamente")
 			break
