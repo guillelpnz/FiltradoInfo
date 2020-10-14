@@ -8,6 +8,5 @@ func main() {
 
 	for _,palabra := range slice {
 		fmt.Println(palabra)
-		break;
 	}
 }
