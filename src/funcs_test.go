@@ -36,3 +36,25 @@ func TestContainsPalabra(t *testing.T) {
 		t.Error("ContainsPalabra no funciona adecuadamente")
 	}
 }
+
+func TestStringToSlice(t *testing.T) {
+	var cadena1 string
+	cadena1 = "Hola esto es una cadena de prueba"
+
+	correcto := make([]string, 7)
+	correcto[0] = "Hola"
+	correcto[1] = "esto"
+	correcto[2] = "es"
+	correcto[3] = "una"
+	correcto[4] = "cadena"
+	correcto[5] = "de"
+	correcto[6] = "prueba"
+
+	for i, palabra := range stringToSlice(cadena1) {
+		if (palabra) != correcto[i] {
+			t.Error("StringToSlice no funciona adecuadamente")
+			break
+		}
+	}
+
+}
