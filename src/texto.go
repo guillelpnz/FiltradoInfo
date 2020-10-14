@@ -43,11 +43,18 @@ func (t *texto) SetAutor(autor string) {
 
 func (t *texto) ObtenerRedundantes() []string {
 	texto := limpiar(t.contenido)
+	slice := stringToSlice(texto)
 
-	redundantes := make([]string, 1)
+	redundantes := make([]string, 0)
 
-	redundantes.append()
-
+	size := len(slice)
+	for i := 0; i < size; i++ {
+		for j := i; j < size; j++ {
+			if slice[i] == slice[j] && !containsPalabra(redundantes, slice[i]) {
+				redundantes = append(redundantes, slice[i])
+			}
+		}
+	}
 	return redundantes
 }
 
