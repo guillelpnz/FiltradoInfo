@@ -1,15 +1,24 @@
 package main
 
-// import (
-// 	"fmt"
+import (
+	"fmt"
 
-// 	"github.com/guillelpnz/TextAnalyzer/src/texto"
-// )
+	"github.com/guillelpnz/TextAnalyzer/src/texto"
+)
 
 func main() {
-	// slice := texto.StringToSlice("Holaaaa me llamo Guille")
+	cadena := "Mi nombre es Guillermo Lupiáñez. A veces practico pádel, otras veces practico Waterpolo"
+	esperada := make([]string, 2)
+	esperada[0] = "veces"
+	esperada[1] = "practico"
 
-	// for _, palabra := range slice {
-	// 	fmt.Println(palabra)
+	text := texto.NewTexto(cadena, nil, "")
+
+	fmt.Println(text.ObtenerSinRedundantes())
+	// for i, palabra := range text.ObtenerRedundantes() {
+	// 	if palabra != esperada[i] {
+	// 		fmt.Println("Hola")
+	// 	}
 	// }
+
 }

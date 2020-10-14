@@ -4,72 +4,93 @@ import (
 	"fmt"
 )
 
-type texto struct {
+//Texto struct to store information about a text
+type Texto struct {
 	contenido    string
 	repeticiones map[string]int
 	autor        string
 }
 
-func (t *texto) NewTexto(c string, r map[string]int, a string) *texto {
+//NewTexto returns a new texto object
+func NewTexto(c string, r map[string]int, a string) *Texto {
+	t := new(Texto)
 	t.contenido = c
 	t.repeticiones = r
 	t.autor = a
 
 	return t
 }
-func (t *texto) GetContenido() string {
+
+//GetContenido returns Texto.contenido
+func (t *Texto) GetContenido() string {
 	return t.contenido
 }
 
-func (t *texto) GetRepeticiones() map[string]int {
+//GetRepeticiones returns Texto.repeticiones
+func (t *Texto) GetRepeticiones() map[string]int {
 	return t.repeticiones
 }
 
-func (t *texto) GetAutor() string {
+//GetAutor return the author of a Texto object
+func (t *Texto) GetAutor() string {
 	return t.autor
 }
 
-func (t *texto) SetContenido(contenido string) {
+//SetContenido sets the attribute contenido
+func (t *Texto) SetContenido(contenido string) {
 	t.contenido = contenido
 }
 
-func (t *texto) SetRepeticiones(repeticiones map[string]int) {
+//SetRepeticiones sets the attribute repeticiones
+func (t *Texto) SetRepeticiones(repeticiones map[string]int) {
 	t.repeticiones = repeticiones
 }
 
-func (t *texto) SetAutor(autor string) {
+//SetAutor sets the attribute autor
+func (t *Texto) SetAutor(autor string) {
 	t.autor = autor
 }
 
-func (t *texto) ObtenerRedundantes() []string {
-	texto := Limpiar(t.contenido)
-	slice := StringToSlice(texto)
+//ObtenerSinRedundantes returns a text without repeated words
+func (t *Texto) ObtenerSinRedundantes() []string {
+	signosPuntuacion := `.;:,"!¡?¿*-<>()|`
 
-	redundantes := make([]string, 0)
+	slice := StringToSlice(t.contenido)
+
+	sinRedundantes := make([]string, 0)
 
 	size := len(slice)
 	for i := 0; i < size; i++ {
 		for j := i; j < size; j++ {
-			if slice[i] == slice[j] && !ContainsPalabra(redundantes, slice[i]) {
-				redundantes = append(redundantes, slice[i])
+			if !ContainsPalabra(sinRedundantes, slice[i]) {
+				for _, char := range signosPuntuacion {
+					if !Contains(slice[i], char) {
+						sinRedundantes = append(sinRedundantes, slice[i])
+						break
+					}
+				}
+
 			}
 		}
 	}
-	return redundantes
+	return sinRedundantes
 }
 
-func (t *texto) IntroducirTexto(texto []string) {
+//IntroducirTexto lets the user store text in the db
+func (t *Texto) IntroducirTexto(texto []string) {
 	fmt.Println("Not implemented yet")
 }
 
-func (t *texto) GetReferencias() []string {
+//GetReferencias returns the allusions to people in a text
+func (t *Texto) GetReferencias() []string {
 	s := make([]string, 1)
 
 	fmt.Println("Not implemented yet")
 	return s
 }
 
-func (t *texto) GetTextoPersona() []string {
+//GetTextoPersona returns the texts a person has written
+func (t *Texto) GetTextoPersona() []string {
 	s := make([]string, 1)
 
 	fmt.Println("Not implemented yet")
