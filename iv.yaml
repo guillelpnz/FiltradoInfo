@@ -1,1 +1,4 @@
 entidad: src/texto.go
+lenguaje: go
+test: src/texto/texto_test.go
+taskfile: Makefile
