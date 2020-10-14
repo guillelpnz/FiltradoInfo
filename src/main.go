@@ -14,7 +14,7 @@ func main() {
 
 	text := texto.NewTexto(cadena, nil, "")
 
-	fmt.Println(text.ObtenerSinRedundantes())
+	fmt.Println("Cadena final ->", text.ObtenerRedundantes())
 	// for i, palabra := range text.ObtenerRedundantes() {
 	// 	if palabra != esperada[i] {
 	// 		fmt.Println("Hola")

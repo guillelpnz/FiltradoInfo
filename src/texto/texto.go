@@ -78,7 +78,22 @@ func (t *Texto) ObtenerSinRedundantes() []string {
 
 //ObtenerRedundantes returns the repeated words on a text
 func (t *Texto) ObtenerRedundantes() []string {
+	limpio := Limpiar(t.contenido)
 
+	slice := StringToSlice(limpio)
+	var redundantes []string
+
+	for i, palabra1 := range slice {
+		for j := i+1; j < len(slice); j++ {
+			if palabra1 == slice[j] && !ContainsPalabra(redundantes, palabra1) {
+				fmt.Println("slice ", slice[j])
+				fmt.Println("palabra1", palabra1)
+				redundantes = append(redundantes, palabra1)
+			}
+		}
+	}
+
+	return redundantes
 }
 
 //IntroducirTexto lets the user store text in the db
