@@ -24,11 +24,15 @@ func TestLimpiar(t *testing.T) {
 }
 
 func TestContainsPalabra(t *testing.T) {
-	var cadena string
+	var slice []string
 
-	cadena = "Hola me llamo Guille"
+	slice = make([]string, 4)
+	slice[0] = "Hola"
+	slice[1] = "me"
+	slice[2] = "llamo"
+	slice[3] = "Guillermo"
 
-	if !containsPalabra(cadena, "me") {
+	if !containsPalabra(slice, "me") {
 		t.Error("ContainsPalabra no funciona adecuadamente")
 	}
 }
