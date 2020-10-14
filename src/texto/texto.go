@@ -84,10 +84,8 @@ func (t *Texto) ObtenerRedundantes() []string {
 	var redundantes []string
 
 	for i, palabra1 := range slice {
-		for j := i+1; j < len(slice); j++ {
+		for j := i + 1; j < len(slice); j++ {
 			if palabra1 == slice[j] && !ContainsPalabra(redundantes, palabra1) {
-				fmt.Println("slice ", slice[j])
-				fmt.Println("palabra1", palabra1)
 				redundantes = append(redundantes, palabra1)
 			}
 		}

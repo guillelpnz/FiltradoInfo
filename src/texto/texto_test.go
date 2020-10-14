@@ -1,7 +1,6 @@
 package texto
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -24,18 +23,16 @@ func TestObtenerSinRedundantes(t *testing.T) {
 }
 
 func TestObtenerRedundantes(t *testing.T) {
-	var mapa map[string]int
-	var autor string
+	// var mapa map[string]int
+	// var autor string
 
 	cadena := "Mi nombre es Guillermo Lupiáñez. A veces practico pádel, otras veces practico Waterpolo"
 	esperada := "veces practico"
 	sliceEsperada := StringToSlice(esperada)
 
-	text := Texto{contenido: cadena, repeticiones: mapa, autor: autor}
-	fmt.Println("slice esperada -> ", sliceEsperada)
-	fmt.Println("slice encontrada -> ", text.ObtenerSinRedundantes())
+	text := NewTexto(cadena, nil, "")
 
-	for i, palabra := range text.ObtenerSinRedundantes() {
+	for i, palabra := range text.ObtenerRedundantes() {
 		if palabra != sliceEsperada[i] {
 			t.Error("Obtener redundantes mal implementado")
 			break
