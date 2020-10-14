@@ -76,6 +76,11 @@ func (t *Texto) ObtenerSinRedundantes() []string {
 	return sinRedundantes
 }
 
+//ObtenerRedundantes returns the repeated words on a text
+func (t *Texto) ObtenerRedundantes() []string {
+
+}
+
 //IntroducirTexto lets the user store text in the db
 func (t *Texto) IntroducirTexto(texto []string) {
 	fmt.Println("Not implemented yet")
