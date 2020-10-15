@@ -13,9 +13,9 @@
 ## Hito 2
 
 1. Informarme sobre el uso del taskrunner de Go, así como de cómo escribir y
-ejecutar tests unitarios en este lenguaje. Las páginas que me ayudaron las puse
-[aquí](https://github.com/JJ/IV/blob/master/documentos/proyecto/2.Tests.recursos.md)
-y [aquí](https://github.com/JJ/IV/blob/master/documentos/proyecto/1.Infraestructura.recursos.md)
+ejecutar tests unitarios en este lenguaje. El link proporcionado por
+los profesores que me ayudó fue [este](https://github.com/JJ/IV/blob/master/documentos/proyecto/2.Tests.md).
+Los links externos los coloqué [aquí](https://github.com/JJ/IV/blob/master/documentos/proyecto/2.Tests.recursos.md) y [aquí](https://github.com/JJ/IV/blob/master/documentos/proyecto/1.Infraestructura.recursos.md)
 
 2. Empezar a desarrollar el código de las funciones auxiliares y testearlo.
 podemos encontrar tanto el archivo de implementación de las funciones como

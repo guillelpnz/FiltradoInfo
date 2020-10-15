@@ -6,6 +6,13 @@ He elegido este lenguaje porque está bastante bien documentado, es simple,
 ha sido desarrollado por Google y creo que puede serme útil en un futuro
 para otros proyectos.
 
+## Herramienta para automatización de tests: Make
+
+Esta herramienta permite al usuario interactuar con la aplicación de una manera
+muy clara y sencilla, y me permite a mí como programador tener una lista
+de acciones que puede realizar el usuario con la aplicación en un mismo
+archivo.
+
 ## Framework para logging: Logrus
 
 Esta librería es la más utilizada por programadores Go para el logging de su
