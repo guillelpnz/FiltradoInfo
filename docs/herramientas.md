@@ -1,9 +1,21 @@
-# Fichero que contiene las herramientas que se van a usar en el proyecto así como la justificación de su uso
+# Herramientas que se van a usar y justificación de las mismas
 
 ## Lenguaje: Go
 
-He elegido este lenguaje porque está bastante bien documentado, es simple, ha sido desarrollado por Google y creo que puede serme útil en un futuro para otros proyectos.
+He elegido este lenguaje porque está bastante bien documentado, es simple,
+ha sido desarrollado por Google y creo que puede serme útil en un futuro
+para otros proyectos.
 
-## Framework para testeo: Jest
+## Framework para logging: Logrus
 
-Su enfoque en la simplicidad y su extendido uso es lo que me han hecho elegir este framework por encima de otros.
+Esta librería es la más utilizada por programadores Go para el logging de su
+aplicación. He decidido usarlo porque aunque Go tiene su propia biblioteca,
+Logrus hace uso de ella para incorporar mejoras, como el manejo de JSON.
+El logueo de una aplicación en Go es un problema que ya está resuelto
+y no es mi intención volver a resolverlo.
+
+## Posible framework para manejar tests y mocks: Testify
+
+Por el momento tan solo estoy usando la biblioteca de tests propia de Go,
+pero puede que cuando tenga que incorporar mocks me sea más fácil hacer
+uso de esta herramienta. No es algo seguro.
