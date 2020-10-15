@@ -1,4 +1,4 @@
-entidad: src/texto.go
+entidad: src/texto/texto.go
 lenguaje: go
 test: src/texto/texto_test.go
 taskfile: Makefile
