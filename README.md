@@ -1,9 +1,6 @@
 # TextAnalyzer
 
-<p class="aligncenter">
-    <img src="docs/imagenes/logo.jpg" alt="logo" width=400/>
-</p>
-<!-- <img src="docs/imagenes/logo.jpg" alt="logo-app" width=400 class="center"/> -->
+<img src="docs/imagenes/logo.jpg" alt="logo" width=400/>
 
 ## Descripción
 
