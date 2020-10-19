@@ -30,40 +30,40 @@ directorio raíz del proyecto y ejecutar el comando:
 
 ## Herramientas utilizadas
 
-El lenguaje que se va a utilizar es Go. Para conocer el resto de herramientas [haz click aquí](docs/herramientas.md).
+El lenguaje que se va a utilizar es Go. Estas son el resto de [herramientas](docs/herramientas.md).
 
 ## Configuración de Git
 
-Para conocer la configuración previa de git [haz click aquí](docs/documentacion.md).
+[configuración previa de git](docs/documentacion.md).
 
 ## Pasos seguidos para desarrollar el proyecto
 
-Para conocer los pasos seguidos para la realización del proyecto [haz click aquí](docs/pasos.md).
+Estos han sido los [pasos](docs/pasos.md) seguidos para la realización del proyecto
 
 ## Interfaz inicial
 
-[Acceder al archivo](src/texto.go)
+[Interfaz inicial](src/texto.go)
 
 ## Testeo de la interfaz
 
-[Acceder al archivo](src/texto_test.go)
+[Testeo de la interfaz](src/texto_test.go)
 
 ## Funciones auxiliares
 
-[Acceder al archivo](src/funcs.go)
+[Funciones auxiliares](src/funcs.go)
 
 ## Testeo de funciones auxiliares
 
-[Acceder al archivo](src/funcs_test.go)
+[Testeo de funciones auxiliares](src/funcs_test.go)
 
 ## Archivo iv.yaml
 
-[Acceder al archivo](iv.yaml)
+[Fichero iv.yaml](iv.yaml)
 
 ## Issues cerrados
 
-[Acceder al archivo](https://github.com/guillelpnz/TextAnalyzer/issues?q=is%3Aissue+is%3Aclosed)
+[Issues cerrados](https://github.com/guillelpnz/TextAnalyzer/issues?q=is%3Aissue+is%3Aclosed)
 
 ## Issues abiertos
 
-[Acceder al archivo](https://github.com/guillelpnz/TextAnalyzer/issues)
+[Issues abiertos](https://github.com/guillelpnz/TextAnalyzer/issues)
