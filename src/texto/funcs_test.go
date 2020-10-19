@@ -23,3 +23,17 @@ func TestLimpiar(t *testing.T) {
 		t.Error("Limpiar no funciona adecuadamente")
 	}
 }
+
+func TestContainsPalabra(t *testing.T) {
+	var slice []string
+
+	slice = make([]string, 4)
+	slice[0] = "Hola"
+	slice[1] = "me"
+	slice[2] = "llamo"
+	slice[3] = "Guillermo"
+
+	if !ContainsPalabra(slice, "Guillermo") {
+		t.Error("ContainsPalabra no funciona adecuadamente")
+	}
+}
