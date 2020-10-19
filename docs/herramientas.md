@@ -11,7 +11,7 @@ para otros proyectos.
 Esta herramienta permite al usuario interactuar con la aplicación de una manera
 muy clara y sencilla, y me permite a mí como programador tener una lista
 de acciones que puede realizar el usuario con la aplicación en un mismo
-archivo.
+archivo. Usaré esta herramienta en lugar de el task runner de Go porque me ahorro tener que escribir los argumentos del comando "go" al ejecutar, testear o compilar la aplicación una y otra vez. Además es algo muy estandarizado dentro de la estructura de los proyectos programados en Go.
 
 ## Framework para logging: Logrus
 
@@ -24,5 +24,8 @@ y no es mi intención volver a resolverlo.
 ## Posible framework para manejar tests y mocks: Testify
 
 Por el momento tan solo estoy usando la biblioteca de tests propia de Go,
-pero puede que cuando tenga que incorporar mocks me sea más fácil hacer
-uso de esta herramienta. No es algo seguro.
+porque creo que para las distintas tareas que tengo que realizar en mi
+aplicación hasta ahora, para lo único que me ayudarían las bibliotecas
+de test sería para generar un código más legible, y no aprovecharía su
+funcionalidad a penas, ocupando un espacio de manera no eficiente.
+Dicho esto, puede que cuando tenga que incorporar mocks me sea más fácil hacer uso de esta herramienta. No es algo seguro.
