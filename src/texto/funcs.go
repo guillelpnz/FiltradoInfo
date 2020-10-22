@@ -58,3 +58,10 @@ func StringToSlice(texto string) []string {
 
 	return slice
 }
+
+//Check panics in case of error
+func Check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}

@@ -2,6 +2,7 @@ package texto
 
 import (
 	"fmt"
+	"io/ioutil"
 )
 
 //Texto struct to store information about a text
@@ -108,6 +109,9 @@ func (t *Texto) GetTextoPersona() []string {
 }
 
 //ObtenerPersonas returns the allusions to people in a text
-func (t *Texto) ObtenerPersonas() []string {
+func (t *Texto) ObtenerPersonas() {
+	diccionario, err := ioutil.ReadFile("../diccionario_nombres.txt")
+	Check(err)
 
+	fmt.Println(diccionario)
 }
