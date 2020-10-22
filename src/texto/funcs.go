@@ -44,7 +44,7 @@ func StringToSlice(texto string) []string {
 
 	for i, char := range texto {
 
-		if string(char) != " " {
+		if string(char) != " " && string(char) != "\n" {
 			palabra = palabra + string(char)
 		} else {
 			slice = append(slice, palabra)

@@ -109,9 +109,22 @@ func (t *Texto) GetTextoPersona() []string {
 }
 
 //ObtenerPersonas returns the allusions to people in a text
-func (t *Texto) ObtenerPersonas() {
-	diccionario, err := ioutil.ReadFile("../diccionario_nombres.txt")
+func (t *Texto) ObtenerPersonas() []string {
+	var personas []string
+	diccionario, err := ioutil.ReadFile("./diccionarios/diccionario_propios.txt")
 	Check(err)
 
-	fmt.Println(diccionario)
+	sliceNombres := StringToSlice(string(diccionario))
+	contenido := Limpiar(t.contenido)
+	sliceContenido := StringToSlice(contenido)
+
+	for i := 0; i < len(sliceContenido); i++ {
+		for j := i; j < len(sliceNombres); j++ {
+			if sliceContenido[i] == sliceNombres[j] {
+				personas = append(personas, sliceContenido[i])
+			}
+		}
+	}
+
+	return personas
 }
