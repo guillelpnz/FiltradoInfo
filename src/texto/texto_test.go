@@ -39,3 +39,16 @@ func TestObtenerRedundantes(t *testing.T) {
 		}
 	}
 }
+
+func TestObtenerPersonas(t *testing.T) {
+	cadena := "Hola, me llamo Guillermo. Ayer estuve visitando a mi amigo Aarón."
+
+	esperada := make([]string, 2)
+	esperada[0] = "Guillermo"
+	esperada[1] = "Aarón"
+	text := NewTexto(cadena, nil, "")
+
+	if text.ObtenerPersonas() != esperada {
+		t.Error("ObtenerPersonas mal implementado")
+	}
+}
