@@ -99,18 +99,15 @@ func (t *Texto) IntroducirTexto(texto []string) {
 	fmt.Println("Not implemented yet")
 }
 
-//GetReferencias returns the allusions to people in a text
-func (t *Texto) GetReferencias() []string {
-	s := make([]string, 1)
-
-	fmt.Println("Not implemented yet")
-	return s
-}
-
 //GetTextoPersona returns the texts a person has written
 func (t *Texto) GetTextoPersona() []string {
 	s := make([]string, 1)
 
 	fmt.Println("Not implemented yet")
 	return s
+}
+
+//ObtenerPersonas returns the allusions to people in a text
+func (t *Texto) ObtenerPersonas() []string {
+
 }
