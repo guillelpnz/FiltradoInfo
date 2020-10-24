@@ -61,3 +61,14 @@ func TestObtenerPersonas(t *testing.T) {
 		}
 	}
 }
+
+func TestNewTextoRep(t *testing.T) {
+	text := NewTextoRep("hola que tal!!, hola que tal!!", "")
+
+	mapa := text.GetRepeticiones()
+
+	if mapa["hola"] != 2 || mapa["que"] != 2 || mapa["tal"] != 2 || mapa["!"] != 0 {
+		t.Error("Constructor repes mal implementado")
+	}
+
+}

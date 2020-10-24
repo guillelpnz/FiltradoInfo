@@ -22,6 +22,23 @@ func NewTexto(c string, r map[string]int, a string) *Texto {
 	return t
 }
 
+//NewTextoRep returns a new texto object with @repeticiones correctly initialized
+func NewTextoRep(c string, a string) *Texto {
+	t := new(Texto)
+	t.contenido = c
+	t.autor = a
+
+	cadenaContenido := Limpiar(t.contenido)
+	sliceContenido := StringToSlice(cadenaContenido)
+
+	t.repeticiones = make(map[string]int, 0)
+	for _, p := range sliceContenido {
+		t.repeticiones[p]++
+	}
+
+	return t
+}
+
 //GetContenido returns Texto.contenido
 func (t *Texto) GetContenido() string {
 	return t.contenido
