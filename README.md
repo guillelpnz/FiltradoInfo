@@ -6,11 +6,12 @@
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
-## Motivación
 
-Durante el trayecto que llevo recorrido de carrera, he tenido que hacer numerosas documentaciones, exposiciones, explicaciones, etc. Esto hizo que me diera cuenta de que paso bastante tiempo revisando si uso palabras de manera redundante. Por lo que se me ocurrió esta pequeña API que facilita el trabajo de analizar textos.
+<!-- ## Motivación
 
-## Uso de la aplicación
+Durante el trayecto que llevo recorrido de carrera, he tenido que hacer numerosas documentaciones, exposiciones, explicaciones, etc. Esto hizo que me diera cuenta de que paso bastante tiempo revisando si uso palabras de manera redundante. Por lo que se me ocurrió esta pequeña API que facilita el trabajo de analizar textos. -->
+
+<!-- ## Uso de la aplicación
 
 1. Para poder hacer uso de TextAnalyzer debes previamente
 [instalar](https://golang.org/dl/) y [configurar](https://golang.org/doc/install)
@@ -30,15 +31,8 @@ directorio raíz del proyecto y ejecutar el comando:
 
 ## Herramientas utilizadas
 
-El lenguaje que se va a utilizar es Go. Estas son el resto de [herramientas](docs/herramientas.md).
-
-## Configuración de Git
-
-[configuración previa de git](docs/documentacion.md).
-
-## Pasos seguidos para desarrollar el proyecto
-
-Estos han sido los [pasos](docs/pasos.md) seguidos para la realización del proyecto
+El lenguaje que se va a utilizar es Go. Estas son el resto de [herramientas](docs/herramientas.md). -->
+<!-- 
 
 ## Interfaz inicial
 
@@ -58,7 +52,7 @@ Estos han sido los [pasos](docs/pasos.md) seguidos para la realización del proy
 
 ## Archivo iv.yaml
 
-[Fichero iv.yaml](iv.yaml)
+[Fichero iv.yaml](iv.yaml) -->
 
 ## Issues cerrados
 
