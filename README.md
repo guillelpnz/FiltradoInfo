@@ -25,6 +25,9 @@ de 800mb. Estas fueron las [pruebas de velocidad que hice](https://github.com/gu
 [Página de mi container](https://hub.docker.com/r/guillelpnz/textanalyzer/tags)
 
 Para que se construya automáticamente, hay que conectar GitHub a Docker Hub mediante un OAUTH. Posteriormente, acceder al apartado Manage Repository/Builds/Configure Automated Builds y ahí activar la pestaña: autobuild.
+
+## Prueba actualizacion en GitHub Container Registry
+
 <!-- ## Motivación
 
 Durante el trayecto que llevo recorrido de carrera, he tenido que hacer numerosas documentaciones, exposiciones, explicaciones, etc. Esto hizo que me diera cuenta de que paso bastante tiempo revisando si uso palabras de manera redundante. Por lo que se me ocurrió esta pequeña API que facilita el trabajo de analizar textos. -->
