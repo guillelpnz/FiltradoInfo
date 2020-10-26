@@ -10,7 +10,11 @@ Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porq
 en velocidad no había una diferencia significativa golang:latest,
 golang:alpine y golang:1.15.3-alpine. En cuanto al espacio,
 todos los golang:alpine pesan cerca de 300mb, mientras que golang:latest pesa más
-de 800mb. Estas fueron las [pruebas de velocidad que hice](./docs/pruebas_velocidad.md)
+de 800mb. Estas fueron las [pruebas de velocidad que hice](https://github.com/guillelpnz/TextAnalyzer/blob/master/docs/pruebas_velocidad.md)
+
+## Dockerfile correcto
+
+[Dockerfile del proyecto](https://github.com/guillelpnz/TextAnalyzer/blob/master/Dockerfile)
 
 <!-- ## Motivación
 
