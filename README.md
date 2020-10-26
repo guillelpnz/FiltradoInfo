@@ -1,34 +1,16 @@
 # TextAnalyzer
 
-<img src="docs/imagenes/logo.jpg" alt="logo" width=400/>
-
 ## Descripción
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
 ## Elección del contenedor base
 
-Como contenedor base he elegido golang:alpine. He tomado esta decisión porque
-en velocidad no había una diferencia significativa golang:latest y el resto de
-golang:alpine, como golang:alpine3.12, por ejemplo. En cuanto al espacio,
-todos los alpine pesan cerca de 300mb, mientras que golang:latest pesa más
-de 800mb. Estas fueron las pruebas de velocidad que hice:
-
-- golang:latest
-
-![Golang latest](docs/imagenes/latest.png)
-
-- golang:alpine3.12
-
-![Golang alpine](docs/imagenes/golang:alpine3.12.png)
-
-- golang:1.15.3alpine
-
-![Golang alpine 1.15.3-alpine](docs/imagenes/alpine2.png)
-
-- golang:alpine
-
-![Golang alpine](docs/imagenes/alpine3.png)
+Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque
+en velocidad no había una diferencia significativa golang:latest,
+golang:alpine y golang:1.15.3-alpine. En cuanto al espacio,
+todos los golang:alpine pesan cerca de 300mb, mientras que golang:latest pesa más
+de 800mb. Estas fueron las [pruebas de velocidad que hice](./docs/pruebas_velocidad.md)
 
 <!-- ## Motivación
 
