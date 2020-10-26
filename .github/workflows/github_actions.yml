@@ -12,12 +12,12 @@ jobs:
             password: ${{ secrets.TOKEN }}
 
       - name: build
-         run: docker build -t ghcr.io/guillelpnz/textanalyzer/golang-alpine:latest .
+        run: docker build -t ghcr.io/${{ secrets.USUARIO_GITHUB }}/textanalyzer/golang-alpine:latest .
 
       - name: test
-         run: docker run -t -v `pwd`:/test ghcr.io/guillelpnz/textanalyzer/golang-alpine:latest
+        run: docker run -t -v `pwd`:/test ghcr.io/${{ secrets.USUARIO_GITHUB }}/textanalyzer/golang-alpine:latest
 
       - name: push
-         run: docker push ghcr.io/guillelpnz/textanalyzer/golang-alpine:latest
+        run: docker push ghcr.io/${{ secrets.USUARIO_GITHUB }}/textanalyzer/golang-alpine:latest
 
       
