@@ -6,7 +6,7 @@ jobs:
       steps:
       - uses: actions/checkout@v2
       - name: login
-         with:
+        with:
             registry: ghcr.io
             username: ${{ secrets.USUARIO_GITHUB }}
             password: ${{ secrets.TOKEN }}
