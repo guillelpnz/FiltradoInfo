@@ -18,7 +18,7 @@ de 800mb. Estas fueron las [pruebas de velocidad que hice](https://github.com/gu
 
 ## Uso de GitHub Container Registry
 
-[Paquete](https://github.com/users/guillelpnz/packages/container/package/textanalyzer%2Fgolang-alpine)
+[Paquetes](https://github.com/guillelpnz?tab=packages)
 
 ## Docker Hub
 
