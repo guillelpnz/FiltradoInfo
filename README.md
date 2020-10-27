@@ -18,15 +18,13 @@ de 800mb. Estas fueron las [pruebas de velocidad que hice](https://github.com/gu
 
 ## Uso de GitHub Container Registry
 
-[Página de mi paquete](https://github.com/users/guillelpnz/packages/container/package/textanalyzer%2Fgolang-alpine)
+[Paquete](https://github.com/users/guillelpnz/packages/container/package/textanalyzer%2Fgolang-alpine)
 
 ## Docker Hub
 
-[Página de mi container](https://hub.docker.com/r/guillelpnz/textanalyzer/tags)
+[Container](https://hub.docker.com/r/guillelpnz/textanalyzer/tags)
 
 Para que se construya automáticamente, hay que conectar GitHub a Docker Hub mediante un OAUTH. Posteriormente, acceder al apartado Manage Repository/Builds/Configure Automated Builds y ahí activar la pestaña: autobuild.
-
-## Prueba actualizacion en GitHub Container Registry
 
 <!-- ## Motivación
 
