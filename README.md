@@ -51,27 +51,14 @@ directorio raíz del proyecto y ejecutar el comando:
 ## Herramientas utilizadas
 
 El lenguaje que se va a utilizar es Go. Estas son el resto de [herramientas](docs/herramientas.md). -->
-<!-- 
 
-## Interfaz inicial
+## Avance del código
 
-[Interfaz inicial](src/texto.go)
-
-## Testeo de la interfaz
-
-[Testeo de la interfaz](src/texto_test.go)
-
-## Funciones auxiliares
-
-[Funciones auxiliares](src/funcs.go)
-
-## Testeo de funciones auxiliares
-
-[Testeo de funciones auxiliares](src/funcs_test.go)
+[Carpeta con los 4 fuentes hasta el momento](https://github.com/guillelpnz/TextAnalyzer/tree/master/src/texto)
 
 ## Archivo iv.yaml
 
-[Fichero iv.yaml](iv.yaml) -->
+[Fichero iv.yaml](iv.yaml)
 
 ## Issues cerrados
 
