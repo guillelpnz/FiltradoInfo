@@ -145,3 +145,31 @@ func (t *Texto) ObtenerPersonas() []string {
 
 	return personas
 }
+
+//ObtenerEstadisticas returns the percentage of use of each word in a text
+func (t *Texto) ObtenerEstadisticas() map[string]float32 {
+	var numPalabras int
+	numPalabras = 0
+	var estadisticas map[string]float32
+	var palabras []string
+	for _, num := range t.repeticiones {
+		numPalabras += num
+	}
+
+	for palabra, num := range t.repeticiones {
+		repetida := false
+		for _, p := range palabras {
+			if palabra == p {
+				repetida = true
+			}
+		}
+
+		if !repetida {
+			estadisticas[palabra] = float32(num / numPalabras)
+			palabras = append(palabras, palabra)
+		}
+
+	}
+
+	return estadisticas
+}
