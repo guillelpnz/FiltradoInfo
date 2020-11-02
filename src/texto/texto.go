@@ -161,6 +161,7 @@ func (t *Texto) ObtenerEstadisticas() map[string]float32 {
 		for _, p := range palabras {
 			if palabra == p {
 				repetida = true
+				break
 			}
 		}
 
