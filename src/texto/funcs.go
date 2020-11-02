@@ -39,8 +39,7 @@ func ContainsPalabra(haystack []string, needle string) bool {
 func StringToSlice(texto string) []string {
 	var slice []string
 	var palabra string
-	var size int
-	size = len(texto)
+	size := len(texto)
 
 	for i, char := range texto {
 

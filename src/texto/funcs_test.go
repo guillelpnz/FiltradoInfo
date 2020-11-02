@@ -3,8 +3,7 @@ package texto
 import "testing"
 
 func TestContains(t *testing.T) {
-	var cadena string
-	cadena = "Hola!"
+	cadena := "Hola!"
 
 	if !Contains(cadena, '!') {
 		t.Error("Contains no funciona adecuadamente")
@@ -25,9 +24,7 @@ func TestLimpiar(t *testing.T) {
 }
 
 func TestContainsPalabra(t *testing.T) {
-	var slice []string
-
-	slice = make([]string, 4)
+	slice := make([]string, 4)
 	slice[0] = "Hola"
 	slice[1] = "me"
 	slice[2] = "llamo"

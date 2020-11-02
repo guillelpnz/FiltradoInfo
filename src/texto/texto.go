@@ -31,7 +31,7 @@ func NewTextoRep(c string, a string) *Texto {
 	cadenaContenido := Limpiar(t.contenido)
 	sliceContenido := StringToSlice(cadenaContenido)
 
-	t.repeticiones = make(map[string]int, 0)
+	t.repeticiones = make(map[string]int)
 	for _, p := range sliceContenido {
 		t.repeticiones[p]++
 	}
