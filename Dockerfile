@@ -12,4 +12,4 @@ USER user
 
 WORKDIR /test
 
-CMD ["make", "lint", "test"]
+CMD ["make", "lint test"]
