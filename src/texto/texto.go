@@ -150,7 +150,7 @@ func (t *Texto) ObtenerPersonas() []string {
 func (t *Texto) ObtenerEstadisticas() map[string]float32 {
 	var numPalabras int
 	numPalabras = 0
-	var estadisticas map[string]float32
+	estadisticas := make(map[string]float32)
 	var palabras []string
 	for _, num := range t.repeticiones {
 		numPalabras += num
@@ -166,7 +166,7 @@ func (t *Texto) ObtenerEstadisticas() map[string]float32 {
 		}
 
 		if !repetida {
-			estadisticas[palabra] = float32(num / numPalabras)
+			estadisticas[palabra] = float32(num) / float32(numPalabras)
 			palabras = append(palabras, palabra)
 		}
 
