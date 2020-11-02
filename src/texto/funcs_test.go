@@ -36,8 +36,7 @@ func TestContainsPalabra(t *testing.T) {
 }
 
 func TestStringToSlice(t *testing.T) {
-	var cadena1 string
-	cadena1 = "Hola esto es una cadena de prueba"
+	cadena1 := "Hola esto es una cadena de prueba"
 
 	correcto := make([]string, 7)
 	correcto[0] = "Hola"
