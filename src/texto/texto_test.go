@@ -72,3 +72,85 @@ func TestNewTextoRep(t *testing.T) {
 	}
 
 }
+
+func TestObtenerEstadisticas(t *testing.T) {
+	textoTest := NewTextoRep("1 1 1 1 1 2 2 2 2 2", "")
+	textoTest2 := NewTextoRep("1 1 1 1 2 2 2 3 3 3", "")
+
+	dicc := make(map[string]float32, 2)
+
+	dicc["1"] = 0.5
+	dicc["2"] = 0.5
+
+	//est := make(map[string]float32, 2)
+	est := textoTest.ObtenerEstadisticas()
+
+	if est["1"] != dicc["1"] || est["2"] != dicc["2"] {
+		t.Error("Obtener estadisticas mal implementado")
+	}
+
+	dicc2 := make(map[string]float32, 3)
+
+	dicc2["1"] = 0.4
+	dicc2["2"] = 0.3
+	dicc2["3"] = 0.3
+
+	//est2 := make(map[string]float32, 3)
+	est2 := textoTest2.ObtenerEstadisticas()
+
+	if est2["1"] != dicc2["1"] ||
+		est2["2"] != dicc2["2"] ||
+		est2["3"] != dicc2["3"] {
+		t.Error("Obtener estadisticas mal implementado")
+	}
+
+}
+
+func TestNewTexto(t *testing.T) {
+	dicc := make(map[string]int, 2)
+	dicc["1"] = 1
+
+	text := NewTexto("hola que tal!!", dicc, "Bilal")
+
+	if text.GetContenido() != "hola que tal!!" || text.repeticiones["1"] != 1 || text.autor != "Bilal" {
+		t.Error("Constructor simple mal implementado")
+	}
+
+}
+
+
+func TestGetContenido(t *testing.T) {
+	dicc := make(map[string]int, 2)
+	dicc["1"] = 1
+	text := NewTexto("hola que tal!!", dicc, "Bilal")
+	text.SetContenido("Estoy bien")
+
+	if text.GetContenido() != "Estoy bien" {
+		t.Error("GetContenido() mal implementado")
+	}
+}
+
+func TestGetRepeticiones(t *testing.T) {
+	dicc := make(map[string]int, 2)
+	dicc["1"] = 1
+	otroDicc := make(map[string]int, 2)
+        otroDicc["1"] = 4
+        otroDicc["2"] = 5
+	text := NewTexto("hola que tal!!", dicc, "Bilal")
+	text.SetRepeticiones(otroDicc)
+
+	if text.GetRepeticiones()["1"] != 4 || text.GetRepeticiones()["2"] != 5 {
+		t.Error("GetRepeticiones() mal implementado")
+	}
+}
+
+func TestGetAutor(t *testing.T) {
+	dicc := make(map[string]int, 2)
+	dicc["1"] = 1
+	text := NewTexto("hola que tal!!", dicc, "Bilal")
+	text.SetAutor("Mohamed")
+
+	if text.GetAutor() != "Mohamed" {
+		t.Error("Get() mal implementado")
+	}
+}
