@@ -14,6 +14,8 @@ Los ejercicios 9 y 10 contienen los pasos que seguí para llevar a cabo la integ
 
 Decidí configurar Shippable, es un proceso muy parecido al de TracisCI. Primero hay que darle acceso a Shippable a nuestro repositorio de GitHub
 
+![Conexión Shippable y GitHub]()
+
 <!-- ## Elección del contenedor base
 
 Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque

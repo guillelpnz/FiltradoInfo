@@ -1,0 +1,16 @@
+language: go
+
+go:
+    - 1.15
+    - 1.14
+    - 1.13
+    - 1.12
+    - 1.11
+
+# Instalamos el linter
+before_install:
+    curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
+
+# Ejecutamos el linter y los tests
+script:
+    make lint test
