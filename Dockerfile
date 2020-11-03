@@ -2,16 +2,14 @@ FROM golang:alpine3.12
 
 LABEL maintainer="Guillermo Lupiáñez <guillelupianez99@gmail.com>"
 
-RUN apk update && apk add make
+RUN apk update && apk add make && apk add curl
 
 RUN addgroup -S tests && adduser --disabled-password --gecos "" -S user -G tests
-
-RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
-
-RUN apk update
 
 USER user
 
 WORKDIR /test
+
+RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
 
 CMD ["make", "lint", "test"]
