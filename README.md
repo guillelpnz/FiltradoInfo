@@ -4,6 +4,14 @@
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
+## Justificación de una nueva herramienta: golangci-lint
+
+[golangci-lint](https://github.com/golangci/golangci-lint) ejecuta linters en
+paralelo, y lo hace 5 veces más rápido que por ejemplo: gometalinter. Además,
+vscode, el entorno en el que estoy desarrollando la aplicación, lo tiene integrado.
+Esto hace que no tenga que preocuparme porque mi linter de vscode y el linter
+que usa la integración continua analicen la sintaxis de manera distinta.
+
 ## Integración continua funcionando y correcta justificación de la misma
 
 Los ejercicios 9 y 10 contienen los pasos que seguí para llevar a cabo la integración continua con TravisCI.
@@ -14,7 +22,24 @@ Los ejercicios 9 y 10 contienen los pasos que seguí para llevar a cabo la integ
 
 Decidí configurar Shippable, es un proceso muy parecido al de TracisCI. Primero hay que darle acceso a Shippable a nuestro repositorio de GitHub
 
-![Conexión Shippable y GitHub]()
+![Conexión Shippable y GitHub](docs/imagenes/shippable+github.png)
+
+Una vez ahí, hay que autorizar a Shippable, al igual que hicimos con Travis.
+Posteriormente, activar nuestro repositorio dentro de los que queremos que se
+testeen cuando se hace push.
+
+Lo siguiente es crear un archivo con el nombre: .shippable.yml
+
+En mi caso he usado make directamente (en Travis usé un container de Docker)
+para ejecutar los tests. Este es mi fichero:
+
+![.shippable.yml](docs/imagenes/shippableyml.png)
+
+Como vemos cubrimos varias versiones de Go, al igual que en Travis, e instalamos el linter para luego ejecutar linter y test
+
+- Funcionamiento correcto:
+
+![funcionamiento correcto](docs/imagenes/shippable_funcionando.png)
 
 <!-- ## Elección del contenedor base
 
@@ -66,7 +91,7 @@ El lenguaje que se va a utilizar es Go. Estas son el resto de [herramientas](doc
 
 ## Avance del código
 
-[Carpeta con los 4 fuentes hasta el momento](https://github.com/guillelpnz/TextAnalyzer/tree/master/src/texto)
+[Carpeta con los fuentes hasta el momento](https://github.com/guillelpnz/TextAnalyzer/tree/master/src/texto)
 
 ## Archivo iv.yaml
 
