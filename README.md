@@ -4,7 +4,17 @@
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
-## Elección del contenedor base
+## Integración continua funcionando y correcta justificación de la misma
+
+Los ejercicios 9 y 10 contienen los pasos que seguí para llevar a cabo la integración continua con TravisCI.
+
+[Fichero de ejercicios del tema](https://github.com/guillelpnz/Ejercicios/blob/master/TDD.md)
+
+## Configuración de algún sistema de integración continua adicional (justificado de la misma forma)
+
+Decidí configurar Shippable, es un proceso muy parecido al de TracisCI. Primero hay que darle acceso a Shippable a nuestro repositorio de GitHub
+
+<!-- ## Elección del contenedor base
 
 Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque
 en velocidad no había una diferencia significativa golang:latest,
@@ -24,7 +34,7 @@ de 800mb. Estas fueron las [pruebas de velocidad que hice](https://github.com/gu
 
 [Container](https://hub.docker.com/r/guillelpnz/textanalyzer/tags)
 
-Para que se construya automáticamente, hay que conectar GitHub a Docker Hub mediante un OAUTH. Posteriormente, acceder al apartado Manage Repository/Builds/Configure Automated Builds y ahí activar la pestaña: autobuild.
+Para que se construya automáticamente, hay que conectar GitHub a Docker Hub mediante un OAUTH. Posteriormente, acceder al apartado Manage Repository/Builds/Configure Automated Builds y ahí activar la pestaña: autobuild. -->
 
 <!-- ## Motivación
 
