@@ -82,8 +82,8 @@ func TestObtenerEstadisticas(t *testing.T) {
 	dicc["1"] = 0.5
 	dicc["2"] = 0.5
 
-	est := make(map[string]float32, 2)
-	est = textoTest.ObtenerEstadisticas()
+	//est := make(map[string]float32, 2)
+	est := textoTest.ObtenerEstadisticas()
 
 	if est["1"] != dicc["1"] || est["2"] != dicc["2"] {
 		t.Error("Obtener estadisticas mal implementado")
@@ -95,8 +95,8 @@ func TestObtenerEstadisticas(t *testing.T) {
 	dicc2["2"] = 0.3
 	dicc2["3"] = 0.3
 
-	est2 := make(map[string]float32, 3)
-	est2 = textoTest2.ObtenerEstadisticas()
+	//est2 := make(map[string]float32, 3)
+	est2 := textoTest2.ObtenerEstadisticas()
 
 	if est2["1"] != dicc2["1"] ||
 		est2["2"] != dicc2["2"] ||
