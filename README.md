@@ -41,6 +41,16 @@ Como vemos cubrimos varias versiones de Go, al igual que en Travis, e instalamos
 
 ![funcionamiento correcto](docs/imagenes/shippable_funcionando.png)
 
+## Uso correcto del gestor de tareas en todos los casos anteriores
+
+El gestor de tareas lo he utilizado tanto en el Dockerfile
+(usado por .travis.yml) como en .shippable.yml (usado directamente)
+
+## Aprovechamiento del contenedor de Docker
+
+El contenedor de Docker lo aprovechamos en TravisCI, que hace uso del
+Dockerfile.
+
 <!-- ## Elección del contenedor base
 
 Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque
