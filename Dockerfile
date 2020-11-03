@@ -4,9 +4,11 @@ LABEL maintainer="Guillermo Lupiáñez <guillelupianez99@gmail.com>"
 
 RUN apk update && apk add make
 
+RUN addgroup -S tests && adduser --disabled-password --gecos "" -S user -G tests
+
 RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
 
-RUN addgroup -S tests && adduser --disabled-password --gecos "" -S user -G tests
+RUN apk update
 
 USER user
 
