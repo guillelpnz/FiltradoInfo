@@ -1,11 +1,13 @@
+## Lenguaje que utilizamos, es nuestro taskrunner y es obligatorio
 language: go
 
+# Instalamos go, con la versión que usamos en el proyecto
 go:
+    #Versión que probamos para asegurar compatibilidad hacia adelante
+    - beta
+
+    #Versión más extendida (LTS)
     - 1.15
-    - 1.14
-    - 1.13
-    - 1.12
-    - 1.11
 
 # Instalamos el linter
 before_install:
