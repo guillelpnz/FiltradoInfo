@@ -3,11 +3,16 @@ language: go
 
 # Instalamos go, con la versión que usamos en el proyecto
 go:
-    #Versión que probamos para asegurar compatibilidad hacia adelante
-    - beta
-
     #Versión más extendida (LTS)
     - 1.15
+
+    #Probamos hasta la version más antigua
+
+    - 1.10
+    - 1.9
+    - 1.8
+    - 1.7
+    - 1.6
 
 # Instalamos el linter
 before_install:
