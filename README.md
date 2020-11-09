@@ -33,7 +33,7 @@ Lo siguiente es crear un archivo con el nombre: .shippable.yml
 En mi caso he usado make directamente (en Travis usé un container de Docker)
 para ejecutar los tests. Este es mi fichero:
 
-![.shippable.yml](docs/imagenes/shippableyml.png)
+![.shippable.yml](docs/imagenes/shippable_reenvio.png)
 
 Como vemos cubrimos varias versiones de Go, al igual que en Travis, e instalamos el linter para luego ejecutar linter y test
 
