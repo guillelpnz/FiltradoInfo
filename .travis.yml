@@ -1,3 +1,7 @@
+# Utilizamos la imagen que menos pesa, ya que todo lo necesario está en
+# el container.
+language: minimal
+
 # Aprovechamos el contenedor de Dockerhub del anterior hito, 
 # haciendo docker pull (descarga)
 before_install:
