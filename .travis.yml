@@ -1,12 +1,8 @@
-language: go
-
-go:
-    - 1.15
-
-# Construimos el contenedor
+# Aprovechamos el contenedor de Dockerhub del anterior hito, 
+# haciendo docker pull (descarga)
 before_install:
-    docker build -t guillelpnz/textanalyzer .
+    docker pull guillelpnz/textanalyzer:latest
 
-# Ejecutamos nuestro contenedor
+# Ejecutamos nuestro contenedor recién descargado
 script:
     docker run -t -v `pwd`:/test guillelpnz/textanalyzer
