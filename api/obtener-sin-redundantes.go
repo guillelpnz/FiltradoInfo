@@ -28,9 +28,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatal("Error desserializando json-> ", err)
-		log.Printf("")
 	}
 
+	fmt.Fprintf(w, "Antes de construir objeto "+result.Contenido)
 	textoObj := texto.NewTextoRep(result.Contenido, "")
 	contenidoSinR := ""
 
