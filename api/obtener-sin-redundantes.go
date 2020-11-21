@@ -24,12 +24,16 @@ type Peticion struct {
 func Handler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	var result Peticion
+
 	body, _ := ioutil.ReadAll(r.Body)
 
 	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatal("Error desserializando json-> ", err)
 	}
 
+	if result.Contenido == "" {
+		fmt.Fprintf(w, "Contenido no se ha metido bien dentro del objeto")
+	}
 	fmt.Fprintf(w, "Antes de construir objeto "+result.Contenido)
 	textoObj := texto.NewTextoRep(result.Contenido, "")
 	contenidoSinR := ""
@@ -39,11 +43,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		contenidoSinR += palabra
 	}
 
-	//respSinSerializar := Respuesta{Contenido: contenidoSinR}
+	respSinSerializar := Respuesta{Contenido: contenidoSinR}
 
-	//respSerializada, _ := json.Marshal(respSinSerializar)
+	respSerializada, _ := json.Marshal(respSinSerializar)
 
 	w.Header().Add("Content-Type", "application/json")
 
-	//fmt.Fprintf(w, string(respSerializada))
+	fmt.Fprintf(w, string(respSerializada))
 }
