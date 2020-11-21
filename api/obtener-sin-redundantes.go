@@ -15,12 +15,15 @@ type Respuesta struct {
 	Contenido string `json:"texto"`
 }
 
+// Peticion contains Unmarshaled request
+type Peticion struct {
+	Contenido string
+}
+
 // Handler returns a webpage
 func Handler(w http.ResponseWriter, r *http.Request) {
-	var textoUnmarshall string
-
 	defer r.Body.Close()
-	var result map[string]interface{}
+	var result Peticion
 	body, _ := ioutil.ReadAll(r.Body)
 
 	if err := json.Unmarshal(body, &result); err != nil {
@@ -28,7 +31,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("")
 	}
 
-	textoObj := texto.NewTextoRep(textoUnmarshall, "")
+	textoObj := texto.NewTextoRep(result.Contenido, "")
 	contenidoSinR := ""
 
 	for _, palabra := range textoObj.ObtenerSinRedundantes() {
