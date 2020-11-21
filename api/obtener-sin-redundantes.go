@@ -20,11 +20,12 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	var textoUnmarshall string
 
 	defer r.Body.Close()
-
+	var result map[string]interface{}
 	body, _ := ioutil.ReadAll(r.Body)
 
-	if err := json.Unmarshal(body, &textoUnmarshall); err != nil {
+	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatal("Error desserializando json-> ", err)
+		log.Printf("")
 	}
 
 	textoObj := texto.NewTextoRep(textoUnmarshall, "")
