@@ -45,5 +45,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	fmt.Fprintf(w, string(respSerializada))
+	//fmt.Fprintf(w, string(respSerializada))
 }
