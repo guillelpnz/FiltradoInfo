@@ -39,9 +39,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		contenidoSinR += palabra
 	}
 
-	respSinSerializar := Respuesta{Contenido: contenidoSinR}
+	//respSinSerializar := Respuesta{Contenido: contenidoSinR}
 
-	respSerializada, _ := json.Marshal(respSinSerializar)
+	//respSerializada, _ := json.Marshal(respSinSerializar)
 
 	w.Header().Add("Content-Type", "application/json")
 
