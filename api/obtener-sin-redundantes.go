@@ -24,6 +24,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 		break
 	default:
+		fmt.Fprintf(w, "Holaaaaa")
 		http.ServeFile(w, r, "templates/index.html")
 		break
 	}
