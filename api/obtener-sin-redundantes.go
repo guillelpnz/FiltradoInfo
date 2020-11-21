@@ -31,9 +31,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Error desserializando json-> ", err)
 	}
 
-	if result.Contenido == "" {
-		fmt.Fprintf(w, "Contenido no se ha metido bien dentro del objeto")
-	}
+	fmt.Fprintf(w, "contenido de body"+string(body))
+
 	fmt.Fprintf(w, "Antes de construir objeto "+result.Contenido)
 	textoObj := texto.NewTextoRep(result.Contenido, "")
 	contenidoSinR := ""
