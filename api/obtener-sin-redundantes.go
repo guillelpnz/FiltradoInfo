@@ -17,7 +17,7 @@ type Respuesta struct {
 
 // Peticion contains Unmarshaled request
 type Peticion struct {
-	Contenido string
+	Contenido string `json:"contenido"`
 }
 
 // Handler returns a webpage
