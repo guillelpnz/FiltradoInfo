@@ -42,8 +42,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		contenidoSinR += palabra + " "
 	}
 
-	contenidoSinR += "\n"
-
 	respSinSerializar := Respuesta{Contenido: contenidoSinR}
 
 	respSerializada, _ := json.Marshal(respSinSerializar)
