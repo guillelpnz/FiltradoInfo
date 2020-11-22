@@ -153,3 +153,12 @@ func TestGetAutor(t *testing.T) {
 		t.Error("Get() mal implementado")
 	}
 }
+
+func TestObtenerNumPalabras(t *testing.T) {
+	text := NewTextoRep("hola que tal!!", "")
+	num := text.ObtenerNumPalabras()
+
+	if num != 3 {
+		t.Error("ObtenerNumPalabras() mal implementado")
+	}
+}
