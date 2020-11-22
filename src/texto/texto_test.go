@@ -118,7 +118,6 @@ func TestNewTexto(t *testing.T) {
 
 }
 
-
 func TestGetContenido(t *testing.T) {
 	dicc := make(map[string]int, 2)
 	dicc["1"] = 1
@@ -134,8 +133,8 @@ func TestGetRepeticiones(t *testing.T) {
 	dicc := make(map[string]int, 2)
 	dicc["1"] = 1
 	otroDicc := make(map[string]int, 2)
-        otroDicc["1"] = 4
-        otroDicc["2"] = 5
+	otroDicc["1"] = 4
+	otroDicc["2"] = 5
 	text := NewTexto("hola que tal!!", dicc, "Bilal")
 	text.SetRepeticiones(otroDicc)
 

@@ -177,5 +177,5 @@ func (t *Texto) ObtenerEstadisticas() map[string]float32 {
 
 // ObtenerNumPalabras returns the number of words in a text
 func (t *Texto) ObtenerNumPalabras() int {
-	return len(t.contenido)
+	return len(StringToSlice(t.contenido))
 }
