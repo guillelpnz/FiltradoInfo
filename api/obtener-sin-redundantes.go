@@ -31,9 +31,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("Error desserializando json-> ", err)
 	}
 
-	fmt.Fprintf(w, "contenido de body"+string(body))
-
-	fmt.Fprintf(w, "Antes de construir objeto "+result.Contenido)
 	textoObj := texto.NewTextoRep(result.Contenido, "")
 	contenidoSinR := ""
 
@@ -48,5 +45,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	fmt.Fprintf(w, string(respSerializada))
+	fmt.Fprintf(w, "Texto sin repetidos -> "+string(respSerializada))
 }
