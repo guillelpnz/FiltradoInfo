@@ -35,7 +35,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	contenidoSinR := ""
 
 	for _, palabra := range textoObj.ObtenerSinRedundantes() {
-		fmt.Fprintf(w, palabra)
 		contenidoSinR += palabra + " "
 	}
 
