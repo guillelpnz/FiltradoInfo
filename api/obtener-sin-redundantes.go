@@ -17,7 +17,7 @@ type Respuesta struct {
 
 // Peticion contains Unmarshaled request
 type Peticion struct {
-	Contenido string `json:"contenido"`
+	Contenido string `json:"texto"`
 }
 
 // Handler returns a webpage
@@ -27,7 +27,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	body, _ := ioutil.ReadAll(r.Body)
 
-	if err := json.Unmarshal(body, &result.Contenido); err != nil {
+	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatal("Error desserializando json-> ", err)
 	}
 
