@@ -27,7 +27,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	body, _ := ioutil.ReadAll(r.Body)
 
-	if err := json.Unmarshal(body, &result); err != nil {
+	if err := json.Unmarshal(body, &result.Contenido); err != nil {
 		log.Fatal("Error desserializando json-> ", err)
 	}
 
