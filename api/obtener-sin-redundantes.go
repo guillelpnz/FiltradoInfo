@@ -15,22 +15,10 @@ type Respuesta struct {
 	Contenido string `json:"texto"`
 }
 
-// Peticion contains Unmarshaled request
-// type Peticion struct {
-// 	Contenido string `json:"texto"`
-// }
-
-// Handler returns a webpage
+// Handler processes a GET request and returns json data with no repeated words
 func Handler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	textQuery := ""
-	// var result Peticion
-
-	//body, _ := ioutil.ReadAll(r.Body)
-
-	// if err := json.Unmarshal(body, &result); err != nil {
-	// 	log.Fatal("Error desserializando json-> ", err)
-	// }
 
 	switch r.Method {
 	case "GET":
