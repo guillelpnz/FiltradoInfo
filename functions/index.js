@@ -1,6 +1,7 @@
 const request = require('request-promise');
 const data = require('./poemas.json')
-exports.handler = async function (event, context){
+
+exports.handler = async event => {
 
   let body = JSON.parse(event.body);
   let {chat, text} = body.message;
