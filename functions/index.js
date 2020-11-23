@@ -1,10 +1,18 @@
-const d = require('./devolverPoemas');
+function devolverPoemas(autor){
+  let poemas = data["poetas"][autor]["poemas"]
+
+  if (poemas != ""){
+      return poemas
+  }
+}
+
+console.log(devolverPoemas("Federico García Lorca"))
 
 exports.handler = async event => {
   const autor = event.queryStringParameters.autor || '';
   let result = ''
   if (autor != ''){
-    result = d.devolverPoemas(autor)
+    result = devolverPoemas(autor)
   }
 
   return {
