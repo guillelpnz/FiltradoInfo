@@ -4,52 +4,25 @@
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
-## Justificación de una nueva herramienta: golangci-lint
+## Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo
 
-[golangci-lint](https://github.com/golangci/golangci-lint) ejecuta linters en
-paralelo, y lo hace 5 veces más rápido que por ejemplo: gometalinter. Además,
-vscode, el entorno en el que estoy desarrollando la aplicación, lo tiene integrado.
-Esto hace que no tenga que preocuparme porque mi linter de vscode y el linter
-que usa la integración continua analicen la sintaxis de manera distinta.
+La conexión entre Vercel y mi GitHub está en [el ejercicio 1 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md)
 
-## Integración continua funcionando y correcta justificación de la misma
+Está hecha con un repo de prueba, pero con mi repositorio es igual.
 
-Los ejercicios 9 y 10 contienen los pasos que seguí para llevar a cabo la integración continua con TravisCI.
+## Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes)
 
-[Fichero de ejercicios del tema](https://github.com/guillelpnz/Ejercicios/blob/master/TDD.md)
+En [mis issues](https://github.com/guillelpnz/TextAnalyzer/issues)
+se puede ver el avance del código, que va referenciándolos.
 
-## Configuración de algún sistema de integración continua adicional (justificado de la misma forma)
+## Uso (e integración) de varias plataformas de despliegue
 
-Decidí configurar Shippable, es un proceso muy parecido al de TracisCI. Primero hay que darle acceso a Shippable a nuestro repositorio de GitHub
+Con Golang, intenté usar Netlify, pero ni el ejemplo de prueba me funcionaba.
 
-![Conexión Shippable y GitHub](docs/imagenes/shippable+github.png)
+También intenté usar Google Cloud Functions. Esta plataforma parecía funcionar,
+de hecho hice dos bots, pero no funcionaban bien:
 
-Una vez ahí, hay que autorizar a Shippable, al igual que hicimos con Travis.
-Posteriormente, activar nuestro repositorio dentro de los que queremos que se
-testeen cuando se hace push.
-
-Lo siguiente es crear un archivo con el nombre: .shippable.yml
-
-En mi caso he usado make directamente (en Travis usé un container de Docker)
-para ejecutar los tests. Este es mi fichero:
-
-![.shippable.yml](docs/imagenes/shippable_reenvio.png)
-
-Como vemos cubrimos varias versiones de Go, al igual que en Travis, e instalamos el linter para luego ejecutar linter y test
-
-- Funcionamiento correcto:
-
-![funcionamiento correcto](docs/imagenes/shippable_funcionando.png)
-
-## Uso correcto del gestor de tareas en todos los casos anteriores
-
-El gestor de tareas lo he utilizado tanto en el Dockerfile
-(usado por .travis.yml) como en .shippable.yml (usado directamente)
-
-## Aprovechamiento del contenedor de Docker
-
-El contenedor de Docker lo aprovechamos en TravisCI, que hace uso del
-Dockerfile.
+[Link a las imágenes de los bots, así como al código de Google Cloud Functions](docs/bots.md)
 
 <!-- ## Elección del contenedor base
 
