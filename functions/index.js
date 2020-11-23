@@ -1,27 +1,6 @@
 const request = require('request-promise');
+const data = require('poemas.json')
 exports.handler = async event => {
-  const data = {
-    "poetas": {
-      "Federico García Lorca": {
-        "poemas": [
-            "Casida del Llanto",
-            "Casada infiel",
-            "Asesinato",
-            "Soneto de la dulce queja",
-            "Danza da lúa en Santiago"
-        ]
-      },
-      "Rafael Alberti": {
-        "poemas": [
-            "Amaranta",
-            "Nocturno",
-            "La paloma",
-            "A galopar"
-        ]
-      }
-    }
-  };
-
   
   const body = JSON.parse(event.body);
   let {conver, texto} = body.message;
