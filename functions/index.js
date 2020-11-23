@@ -23,10 +23,10 @@ exports.handler = async event => {
 
   const autor = event.queryStringParameters.autor || '';
   if (autor == ''){
-    result = data["poetas"]["Federico García Lorca"]["poemas"]
+    result = "Poemas de Federico García Lorca: "+data["poetas"]["Federico García Lorca"]["poemas"].toString()
   }
   else{
-    result = data["poetas"]["Rafael Alberti"]["poemas"]
+    result = "Poemas de Rafael Alberti: "+data["poetas"]["Rafael Alberti"]["poemas"].toString()
   }
 
   return {
