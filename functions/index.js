@@ -26,6 +26,9 @@ exports.handler = async event => {
     //result = data["poetas"][autor.toString()]["poemas"]
     result = data["poetas"][autor.toString()]
   }
+  else{
+    result = data["poetas"]["Rafael Alberti"]["poemas"]
+  }
 
   return {
     statusCode: 200,
