@@ -11,6 +11,7 @@ console.log(devolverPoemas("Federico García Lorca"))
 
 exports.handler = async event => {
   const autor = event.queryStringParameters.autor || '';
+
   let result = ''
   if (autor != ''){
     result = devolverPoemas(autor)
@@ -18,6 +19,6 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
-    body: result.toString()
+    body: autor.toString()
   }
 }
