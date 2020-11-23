@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"regexp"
+	"strings"
 
 	"github.com/guillelpnz/TextAnalyzer/src/texto"
 )
@@ -49,6 +50,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		contenidoSinR += palabra + " "
 	}
 
+	contenidoSinR = strings.TrimRight(contenidoSinR, " ")
 	respSinSerializar := Respuesta{Contenido: contenidoSinR}
 
 	respSerializada, _ := json.Marshal(respSinSerializar)
