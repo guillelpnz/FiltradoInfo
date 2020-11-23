@@ -1,4 +1,3 @@
-const request = require('request-promise');
 let data = {
   "poetas": {
     "Federico García Lorca": {
