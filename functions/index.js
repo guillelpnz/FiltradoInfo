@@ -23,7 +23,8 @@ let data = {
 exports.handler = async event => {
   const autor = event.queryStringParameters.autor || '';
   if (autor != ''){
-    result = data["poetas"][autor.toString()]["poemas"]
+    //result = data["poetas"][autor.toString()]["poemas"]
+    result = autor.toString()
   }
 
   return {
