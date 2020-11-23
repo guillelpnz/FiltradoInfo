@@ -24,6 +24,17 @@ de hecho hice dos bots, pero no funcionaban bien:
 
 [Link a las imágenes de los bots, así como al código de Google Cloud Functions](docs/bots.md)
 
+Acabé usando Node con Netlify:
+El resultado: una función que se supone que debe devolverte los títulos de
+los textos de celebridades, que se pasan mediante una variable get.
+
+Como la función que se usa para obtener las variables de get me estaba dando fallo,
+hice que al estar indefinido el campo obtenido por get (fallo de dicha función)
+muestre los [poemas más famosos de Rafael Alberti](https://guillelpnz-text-analyzer.netlify.app/.netlify/functions/index?autor=%22Rafael%20Alberti%22).
+
+Mientras que al acceder a la ruta 
+
+
 <!-- ## Elección del contenedor base
 
 Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque
