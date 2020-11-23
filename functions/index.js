@@ -7,12 +7,12 @@ exports.handler = async function (event, context){
 
   let result = ""
 
-  switch(texto){
-    case "alberti":
+  switch(text){
+    case "/alberti":
       result = "Poemas de Rafael Alberti: " + data["poetas"]["Rafael Alberti"]["poemas"].toString();
       break;
     
-    case "lorca":
+    case "/lorca":
       result = "Poemas de Federico García Lorca: " + data["poetas"]["Federico García Lorca"]["poemas"].toString();
       break;
     default:
