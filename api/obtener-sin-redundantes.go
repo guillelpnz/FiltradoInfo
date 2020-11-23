@@ -18,6 +18,7 @@ type Respuesta struct {
 // Handler returns a webpage
 func Handler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
+	textQuery := ""
 	// var result Peticion
 
 	//body, _ := ioutil.ReadAll(r.Body)
@@ -28,8 +29,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	switch r.Method {
 	case "GET":
-		for k, v := range r.URL.Query() {
-			fmt.Fprintf(w, "%s: %s\n", k, v)
+		for _, v := range r.URL.Query() {
+			fmt.Fprintf(w, "%s\n", v)
+			textQuery += v[0]
 		}
 		break
 	}
