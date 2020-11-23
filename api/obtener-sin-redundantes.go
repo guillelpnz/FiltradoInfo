@@ -33,7 +33,9 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		for _, v := range r.URL.Query() {
-			textQuery += v[0]
+			if v[0] != "" {
+				textQuery += v[0]
+			}
 		}
 
 		break
@@ -52,5 +54,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Content-Type", "application/json")
 
-	fmt.Fprintf(w, "Texto sin repetidos -> "+string(respSerializada))
+	fmt.Fprintf(w, "Texto con repetidos: %s", textQuery)
+	fmt.Fprintf(w, "Texto sin repetidos: %s", string(respSerializada))
 }
