@@ -1,0 +1,26 @@
+{
+  "name": "textanalyzer",
+  "version": "1.0.0",
+  "description": "## Descripción",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillelpnz/TextAnalyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guillelpnz/TextAnalyzer/issues"
+  },
+  "homepage": "https://github.com/guillelpnz/TextAnalyzer#readme",
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
