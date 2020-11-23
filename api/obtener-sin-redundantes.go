@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"regexp"
 
 	"github.com/guillelpnz/TextAnalyzer/src/texto"
 )
@@ -33,11 +34,11 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		for _, v := range r.URL.Query() {
-			if v[0] != "" {
-				textQuery += v[0]
-			}
+			textQuery += v[0]
 		}
 
+		reg, _ := regexp.Compile("[^a-zA-Z0-9]+")
+		textQuery = reg.ReplaceAllString(textQuery, "")
 		break
 	}
 
