@@ -37,7 +37,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			textQuery += v[0]
 		}
 
-		reg, _ := regexp.Compile("[^a-zA-Z0-9\\s]")
+		reg, _ := regexp.Compile("[^a-zA-Z0-9\\s.,¡!¿?;<>]")
 		textQuery = reg.ReplaceAllString(textQuery, "")
 		break
 	}
