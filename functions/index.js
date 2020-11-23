@@ -21,7 +21,10 @@ exports.handler = async event => {
     }
   }
 
-  const autor = event.queryStringParameters.autor || '';
+  queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const autor = urlParams.get('autor')
+
   if (autor != ''){
     //result = data["poetas"][autor.toString()]["poemas"]
     result = data["poetas"][autor.toString()]
