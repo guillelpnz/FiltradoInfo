@@ -1,5 +1,5 @@
-//Package p contains an HTTP Cloud Function.
-package p
+//Package handler contains an HTTP Cloud Function.
+package handler
 
 import (
 	"encoding/json"
@@ -33,8 +33,8 @@ var poema = Poema{
 	Contenido: "Mis pasos en esta calle Resuenan En otra calle Donde Oigo mis pasos Pasar en esta calle Donde Sólo es real la niebla.",
 }
 
-// ObtenerEstadisticas returns the statistics of a famous poem in Spanish
-func ObtenerEstadisticas(w http.ResponseWriter, r *http.Request) {
+// Handler returns the statistics of a famous poem in Spanish
+func Handler(w http.ResponseWriter, r *http.Request) {
 	var poema Poema
 	defer r.Body.Close()
 	body, _ := ioutil.ReadAll(r.Body)
