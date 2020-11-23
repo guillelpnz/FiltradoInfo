@@ -1,5 +1,5 @@
-const data = require("./poemas.json" )
 function devolverPoemas(autor){
+  const data = require("./poemas.json" )
   let poemas = data["poetas"][autor]["poemas"]
 
   if (poemas != ""){
