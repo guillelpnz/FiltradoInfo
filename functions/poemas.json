@@ -1,0 +1,23 @@
+{
+    "poemas": {
+        "poetas": {
+            "Federico García Lorca": {
+                "poemas": [
+                    "Casida del Llanto",
+                    "Casada infiel",
+                    "Asesinato",
+                    "Soneto de la dulce queja",
+                    "Danza da lúa en Santiago"
+                ]
+            },
+            "Rafael Alberti": {
+                "poemas": [
+                    "Amaranta",
+                    "Nocturno",
+                    "La paloma",
+                    "A galopar"
+                ]
+            }
+        }
+    }
+}
