@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"net/http"
 
 	"github.com/guillelpnz/TextAnalyzer/src/texto"
@@ -16,22 +15,24 @@ type Respuesta struct {
 }
 
 // Peticion contains Unmarshaled request
-type Peticion struct {
-	Contenido string `json:"texto"`
-}
+// type Peticion struct {
+// 	Contenido string `json:"texto"`
+// }
 
 // Handler returns a webpage
 func Handler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
-	var result Peticion
+	// var result Peticion
 
 	body, _ := ioutil.ReadAll(r.Body)
 
-	if err := json.Unmarshal(body, &result); err != nil {
-		log.Fatal("Error desserializando json-> ", err)
-	}
+	// if err := json.Unmarshal(body, &result); err != nil {
+	// 	log.Fatal("Error desserializando json-> ", err)
+	// }
 
-	textoObj := texto.NewTextoRep(result.Contenido, "")
+	result := string(body)
+
+	textoObj := texto.NewTextoRep(result, "")
 	contenidoSinR := ""
 
 	for _, palabra := range textoObj.ObtenerSinRedundantes() {
