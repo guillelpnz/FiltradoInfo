@@ -1,3 +1,4 @@
+const data = require("./poemas.json" )
 function devolverPoemas(autor){
   let poemas = data["poetas"][autor]["poemas"]
 
