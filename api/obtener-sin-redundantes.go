@@ -36,6 +36,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		break
 	}
 
+	fmt.Fprintf(w, textQuery)
+
 	// fmt.Fprintf(w, fmt.Sprintf("Result -> %s", result))
 
 	// textoObj := texto.NewTextoRep(result, "")
