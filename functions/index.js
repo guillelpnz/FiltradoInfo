@@ -3,7 +3,7 @@ const data = require('./poemas.json')
 exports.handler = async function (event, context){
 
   let body = JSON.parse(event.body);
-  let {conver, texto} = body.message;
+  let {chat, text} = body.message;
 
   let result = ""
 
@@ -22,7 +22,7 @@ exports.handler = async function (event, context){
 
   return {
     statusCode: 200,
-    body: JSON.stringify({texto:result, method:'sendMessage', chat_id:conver.id}),
+    body: JSON.stringify({text: result, method: 'sendMessage', chat_id:chat.id}),
     headers:{
       'Content-Type': 'application/json'
     }
