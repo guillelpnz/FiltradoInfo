@@ -32,6 +32,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	result := string(body)
 
+	fmt.Fprintf(w, fmt.Sprintf("Result -> %s", result))
+
 	textoObj := texto.NewTextoRep(result, "")
 	contenidoSinR := ""
 
