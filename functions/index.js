@@ -1,5 +1,5 @@
 exports.handler = async event => {
-  let data = {
+  const data = {
     "poetas": {
       "Federico García Lorca": {
         "poemas": [
