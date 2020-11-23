@@ -27,7 +27,8 @@ exports.handler = async event => {
     result = data["poetas"][autor.toString()]
   }
   else{
-    result = data["poetas"]["Rafael Alberti"]["poemas"]
+    //result = data["poetas"]["Rafael Alberti"]["poemas"]
+    result = autor
   }
 
   return {
