@@ -24,21 +24,18 @@ de hecho hice dos bots, pero no funcionaban bien:
 
 [Link a las imágenes de los bots, así como al código de Google Cloud Functions](docs/bots.md)
 
-Acabé usando Node con Netlify:
-El resultado: una función que se supone que debe devolverte los títulos de
-los textos de celebridades, que se pasan mediante una variable get. (HU4)
+Acabé programando un bot Node que usa un endpoint de Netlify.
+El bot devuelve los títulos de los textos de celebridades. (HU4)
+En mi caso he recopilado algunos de Rafael Alberti y Federico García Lorca.
 
-Como la función que se usa para obtener las variables de get me estaba dando fallo,
-hice que al estar indefinido el campo obtenido por get (fallo de dicha función)
-muestre los [poemas más famosos de Rafael Alberti](https://guillelpnz-text-analyzer.netlify.app/.netlify/functions/index?autor=%22Rafael%20Alberti%22).
-
-Mientras que al acceder a la ruta sin ninguna variable get, se obtengan los
-[poemas más famosos de Federico García Lorca](https://guillelpnz-text-analyzer.netlify.app/.netlify/functions/index)
+Para más información sobre el funcionamiento del bot, así como la automatización
+de los pushes, se puede ver el [ejercicio 3 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md)
 
 ## Originalidad
 
-He cambiado de lenguaje a Node para la anterior rúbrica, y he probado
-3 sistemas de FaaS.
+He cambiado de lenguaje a Node para la anterior rúbrica, y he hecho un bot.
+
+He probado 3 sistemas de FaaS.
 
 Hice 2 bots en Google Cloud Functions, que aunque fueron fallidos, me sirvieron
 para entender más en profundidad el tema y dicha plataforma
