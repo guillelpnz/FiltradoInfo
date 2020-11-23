@@ -4,7 +4,7 @@ module.exports = async (ctx) => {
     if ( search==="" || isNaN(search)) {
         return
     } else {
-        if ( search === "/tamanioaqui" ){
+        if ( search === "tamanioaqui" ){
             const answer = []
             let tam = aqui.split(" ").length
             answer.push({
@@ -17,7 +17,7 @@ module.exports = async (ctx) => {
                 }
             })
         }
-        if (search === "/aqui"){
+        if (search === "aqui"){
             const answer = []
             let tam = aqui.split(" ").length
             answer.push({
