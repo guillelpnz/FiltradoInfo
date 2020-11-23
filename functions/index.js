@@ -33,6 +33,6 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
-    body: result
+    body: result.toString()
   }
 }
