@@ -27,7 +27,7 @@ function devolverPoemas(autor){
   }
 }
 
-// console.log(devolverPoemas("Federico García Lorca"))
+console.log(devolverPoemas("Federico García Lorca"))
 
 exports.handler = async event => {
   const autor = event.queryStringParameters.autor || '';
