@@ -1,13 +1,10 @@
-const devolverPoemas = require('./devolverPoemas');
-const lib = require('./devolverPoemas')
-
-console.log(lib.devolverPoemas("Rafael Alberti"))
+const d = require('./devolverPoemas');
 
 exports.handler = async event => {
   const autor = event.queryStringParameters.autor || '';
 
   if (autor != ''){
-    result = devolverPoemas(autor)
+    result = d.devolverPoemas(autor)
   }
 
   return {
