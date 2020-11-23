@@ -13,7 +13,7 @@ Está hecha con un repo de prueba, pero con mi repositorio es igual.
 ## Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes)
 
 En [mis issues](https://github.com/guillelpnz/TextAnalyzer/issues)
-se puede ver el avance del código, que va referenciándolos.
+se puede ver el avance del código, donde voy referenciándolos.
 
 ## Uso (e integración) de varias plataformas de despliegue
 
@@ -26,14 +26,24 @@ de hecho hice dos bots, pero no funcionaban bien:
 
 Acabé usando Node con Netlify:
 El resultado: una función que se supone que debe devolverte los títulos de
-los textos de celebridades, que se pasan mediante una variable get.
+los textos de celebridades, que se pasan mediante una variable get. (HU4)
 
 Como la función que se usa para obtener las variables de get me estaba dando fallo,
 hice que al estar indefinido el campo obtenido por get (fallo de dicha función)
 muestre los [poemas más famosos de Rafael Alberti](https://guillelpnz-text-analyzer.netlify.app/.netlify/functions/index?autor=%22Rafael%20Alberti%22).
 
-Mientras que al acceder a la ruta 
+Mientras que al acceder a la ruta sin ninguna variable get, se obtengan los
+[poemas más famosos de Federico García Lorca](https://guillelpnz-text-analyzer.netlify.app/.netlify/functions/index)
 
+## Originalidad
+
+He cambiado de lenguaje a Node para la anterior rúbrica, y he probado
+3 sistemas de FaaS.
+
+Hice 2 bots en Google Cloud Functions, que aunque fueron fallidos, me sirvieron
+para entender más en profundidad el tema y dicha plataforma
+
+Programé una función correspondiente a una nueva HU, así como su test.
 
 <!-- ## Elección del contenedor base
 
