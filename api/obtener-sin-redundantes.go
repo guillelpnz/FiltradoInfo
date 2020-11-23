@@ -1,8 +1,11 @@
 package handler
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
+
+	"github.com/guillelpnz/TextAnalyzer/src/texto"
 )
 
 // Respuesta contains a text without duplicate words
@@ -30,28 +33,24 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
 		for _, v := range r.URL.Query() {
-			fmt.Fprintf(w, "%s\n", v)
 			textQuery += v[0]
 		}
+
 		break
 	}
 
-	fmt.Fprintf(w, textQuery)
+	textoObj := texto.NewTextoRep(textQuery, "")
+	contenidoSinR := ""
 
-	// fmt.Fprintf(w, fmt.Sprintf("Result -> %s", result))
+	for _, palabra := range textoObj.ObtenerSinRedundantes() {
+		contenidoSinR += palabra + " "
+	}
 
-	// textoObj := texto.NewTextoRep(result, "")
-	// contenidoSinR := ""
+	respSinSerializar := Respuesta{Contenido: contenidoSinR}
 
-	// for _, palabra := range textoObj.ObtenerSinRedundantes() {
-	// 	contenidoSinR += palabra + " "
-	// }
+	respSerializada, _ := json.Marshal(respSinSerializar)
 
-	// respSinSerializar := Respuesta{Contenido: contenidoSinR}
+	w.Header().Add("Content-Type", "application/json")
 
-	// respSerializada, _ := json.Marshal(respSinSerializar)
-
-	// w.Header().Add("Content-Type", "application/json")
-
-	// fmt.Fprintf(w, "Texto sin repetidos -> "+string(respSerializada))
+	fmt.Fprintf(w, "Texto sin repetidos -> "+string(respSerializada))
 }
