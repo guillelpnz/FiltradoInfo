@@ -2,7 +2,7 @@ const request = require('request-promise');
 const data = require('./poemas.json')
 exports.handler = async event => {
 
-  const body = JSON.parse(event.body);
+  let body = JSON.parse(event.body);
   let {conver, texto} = body.message;
 
   let result = ""
