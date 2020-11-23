@@ -32,5 +32,3 @@ exports.handler = async event => {
     body: result.toString()
   }
 }
-
-console.log(data["poetas"]["Rafael Alberti"]["poemas"])
