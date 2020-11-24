@@ -16,7 +16,7 @@ type Respuesta struct {
 }
 
 // Handler processes a GET request and returns json data with no repeated words
-func handler(w http.ResponseWriter, r *http.Request) {
+func Handler(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	textQuery := ""
 
