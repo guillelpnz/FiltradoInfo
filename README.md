@@ -8,7 +8,36 @@ El proyecto consiste en una API REST programada en [Go](https://golang.org/) que
 
 La conexión entre Vercel y mi GitHub está en [el ejercicio 1 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md)
 
-Está hecha con un repo de prueba, pero con mi repositorio es igual.
+Está hecha con un repo de prueba, pero con mi repositorio se conecta de la misma forma.
+
+Una vez que se ha conectado GitHub con mi repositorio, nos debería de aparecer
+en la pestaña Overview de Vercel. El endpoint que se nos asignará, contendrá
+un token aleatorio, haciendo la url menos legible, por lo que decidí cambiar
+el dominio en Settings > Domain.
+
+La función que desplegué en esta plataforma es la correspondiente a mi HU5.
+La función trata de eliminar palabras repetidas de un texto. Está implementada
+en [este fichero](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/texto/texto.go).
+Se llama ObtenerSinRedundantes(). Básicamente, sobre un objeto tipo Texto (mi clase), modifica
+su atributo contenido, eliminando palabras repetidas.
+
+Esta es la única operación que hice de configuración de Vercel, además de
+conectarlo con mi repo de GitHub. Los builds automáticos se configuran
+automáticamente.
+
+Para poder desplegarla tuve que hacer cambios:
+
+Como vercel coge las funciones del directorio /api, tuve que crear ese directorio y colocar ahí
+un fichero .go con mi función. [Éste es el fichero obtener-sin-redundantes.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/api/obtener-sin-redundantes.go).
+
+Lo que cambia es que ahora el texto a modificar nos lo pasan por query string,
+por lo que hacemos un saneamiento de la cadena que nos pasan antes de llamar
+al método de mi clase, y tras inicializar un objeto con el contenido de lo que
+nos han pasado por GET, ya llamamos a ObtenerSinRedundantes.
+
+Otro cambio es que en mi código, esta función devuelve un slice de string.
+En cambio, al tener que devolver un string tuve que hacer una pequeña modificación,
+recorriendo este slice y concatenando sus palabras en un string, separando por espacios.
 
 ## Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes)
 
