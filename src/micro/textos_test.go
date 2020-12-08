@@ -2,6 +2,8 @@ package micro
 
 import (
 	"testing"
+
+	"github.com/guillelpnz/TextAnalyzer/src/texto"
 )
 
 func TestIntroducirTexto(t *testing.T) {
@@ -49,5 +51,23 @@ func TestObtenerPersonas(t *testing.T) {
 			t.Error("ObtenerPersonas mal implementado")
 		}
 		i++
+	}
+}
+
+func TestObtenerSinRedundantes(t *testing.T) {
+	array := NewTextos()
+	cadena := "Mi nombre es Guillermo Lupiáñez. A veces practico pádel, otras veces practico Waterpolo"
+	array.IntroducirTexto(cadena, "Guillermo Lupiáñez")
+
+	esperada := "Mi nombre es Guillermo Lupiáñez. A veces practico pádel, otras Waterpolo"
+	sliceEsperada := texto.StringToSlice(esperada)
+
+	j := 0
+	for i, palabra := range array.ObtenerSinRedundantes(j) {
+		if palabra != sliceEsperada[i] {
+			t.Error("Obtener redundantes mal implementado")
+			break
+		}
+		j++
 	}
 }
