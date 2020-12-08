@@ -13,3 +13,10 @@ func NewTextos() *Textos {
 
 	return t
 }
+
+//IntroducirTexto adds a new text to Textos.array
+func (t *Textos) IntroducirTexto(contenido string, autor string) {
+	nuevo := texto.NewTextoRep(contenido, autor)
+
+	t.array = append(t.array, *nuevo)
+}
