@@ -30,3 +30,8 @@ func (t *Textos) IntroducirTexto(contenido string, autor string) {
 func (t *Textos) ObtenerRedundantes(i int) []string {
 	return t.Get(i).ObtenerRedundantes()
 }
+
+// ObtenerPersonas returns the allusions to people on a text (Spanish names)
+func (t *Textos) ObtenerPersonas(i int) []string {
+	return t.Get(i).ObtenerPersonas()
+}

@@ -30,5 +30,4 @@ func TestObtenerRedundantes(t *testing.T) {
 			t.Error("Obtener Redundantes mal implementado")
 		}
 	}
-
 }
