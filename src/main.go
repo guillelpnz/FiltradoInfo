@@ -1,24 +1,19 @@
 package main
 
-// import (
-// 	"fmt"
+import (
+	// "fmt"
 
-// 	"github.com/guillelpnz/TextAnalyzer/src/texto"
-// )
+	// "github.com/guillelpnz/TextAnalyzer/src/texto"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	// cadena := "Mi nombre es Guillermo Lupiáñez. A veces practico pádel, otras veces practico Waterpolo"
-	// esperada := make([]string, 2)
-	// esperada[0] = "veces"
-	// esperada[1] = "practico"
-
-	// text := texto.NewTexto(cadena, nil, "")
-
-	// fmt.Println("Cadena final ->", text.ObtenerRedundantes())
-	// for i, palabra := range text.ObtenerRedundantes() {
-	// 	if palabra != esperada[i] {
-	// 		fmt.Println("Hola")
-	// 	}
-	// }
-
+	router := gin.Default()
+	router.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	router.Run() // listen and serve on 0.0.0.0:8080
 }
