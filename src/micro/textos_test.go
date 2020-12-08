@@ -31,3 +31,23 @@ func TestObtenerRedundantes(t *testing.T) {
 		}
 	}
 }
+
+func TestObtenerPersonas(t *testing.T) {
+	array := NewTextos()
+
+	cadena := "Hola, me llamo Guillermo. Ayer estuve visitando a mi amigo Aarón."
+
+	array.IntroducirTexto(cadena, "Guillermo Lupiáñez")
+
+	esperada := make([]string, 2)
+	esperada[0] = "Guillermo"
+	esperada[1] = "Aarón"
+
+	i := 0
+	for _, palabra := range array.ObtenerRedundantes(i) {
+		if palabra != esperada[i] {
+			t.Error("ObtenerPersonas mal implementado")
+		}
+		i++
+	}
+}
