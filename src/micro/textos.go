@@ -40,3 +40,8 @@ func (t *Textos) ObtenerPersonas(i int) []string {
 func (t *Textos) ObtenerSinRedundantes(i int) []string {
 	return t.Get(i).ObtenerSinRedundantes()
 }
+
+//ObtenerEstadisticas returns the text in position i without repeated words
+func (t *Textos) ObtenerEstadisticas(i int) map[string]float32 {
+	return t.Get(i).ObtenerEstadisticas()
+}
