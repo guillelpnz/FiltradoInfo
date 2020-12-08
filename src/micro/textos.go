@@ -14,6 +14,11 @@ func NewTextos() *Textos {
 	return t
 }
 
+// Get returns the text at i position of the array
+func (t *Textos) Get(i int) texto.Texto {
+	return t.array[i]
+}
+
 //IntroducirTexto adds a new text to Textos.array
 func (t *Textos) IntroducirTexto(contenido string, autor string) {
 	nuevo := texto.NewTextoRep(contenido, autor)
