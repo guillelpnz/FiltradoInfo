@@ -71,3 +71,38 @@ func TestObtenerSinRedundantes(t *testing.T) {
 		j++
 	}
 }
+
+func TestObtenerEstadisticas(t *testing.T) {
+	array1 := NewTextos()
+
+	cadena1 := "1 1 1 1 1 2 2 2 2 2"
+
+	cadena2 := "1 1 1 1 2 2 2 3 3 3"
+
+	array1.IntroducirTexto(cadena1, "Guillermo Lupiáñez")
+	array1.IntroducirTexto(cadena2, "Guillermo Lupiáñez")
+
+	dicc := make(map[string]float32, 2)
+
+	dicc["1"] = 0.5
+	dicc["2"] = 0.5
+
+	est := array1.ObtenerEstadisticas(0)
+	est2 := array1.ObtenerEstadisticas(1)
+
+	if est["1"] != dicc["1"] || est["2"] != dicc["2"] {
+		t.Error("Obtener estadisticas mal implementado")
+	}
+
+	dicc2 := make(map[string]float32, 3)
+
+	dicc2["1"] = 0.4
+	dicc2["2"] = 0.3
+	dicc2["3"] = 0.3
+
+	if est2["1"] != dicc2["1"] ||
+		est2["2"] != dicc2["2"] ||
+		est2["3"] != dicc2["3"] {
+		t.Error("Obtener estadisticas mal implementado")
+	}
+}
