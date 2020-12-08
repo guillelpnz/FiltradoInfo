@@ -35,3 +35,8 @@ func (t *Textos) ObtenerRedundantes(i int) []string {
 func (t *Textos) ObtenerPersonas(i int) []string {
 	return t.Get(i).ObtenerPersonas()
 }
+
+//ObtenerSinRedundantes returns the text in position i without repeated words
+func (t *Textos) ObtenerSinRedundantes(i int) []string {
+	return t.Get(i).ObtenerSinRedundantes()
+}
