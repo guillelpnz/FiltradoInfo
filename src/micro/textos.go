@@ -25,3 +25,8 @@ func (t *Textos) IntroducirTexto(contenido string, autor string) {
 
 	t.array = append(t.array, *nuevo)
 }
+
+// ObtenerRedundantes returns the repeated words in the text on i position
+func (t *Textos) ObtenerRedundantes(i int) []string {
+	return t.Get(i).ObtenerRedundantes()
+}
