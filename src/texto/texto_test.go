@@ -46,21 +46,21 @@ func TestObtenerRedundantes(t *testing.T) {
 // 	t.Log(text.ObtenerPersonas())
 // }
 
-func TestObtenerPersonas(t *testing.T) {
-	cadena := "Hola, me llamo Guillermo. Ayer estuve visitando a mi amigo Aarón."
+// func TestObtenerPersonas(t *testing.T) {
+// 	cadena := "Hola, me llamo Guillermo. Ayer estuve visitando a mi amigo Aarón."
 
-	esperada := make([]string, 2)
-	esperada[0] = "Guillermo"
-	esperada[1] = "Aarón"
-	text := NewTexto(cadena, nil, "")
+// 	esperada := make([]string, 2)
+// 	esperada[0] = "Guillermo"
+// 	esperada[1] = "Aarón"
+// 	text := NewTexto(cadena, nil, "")
 
-	for i, palabra := range text.ObtenerPersonas() {
-		if palabra != esperada[i] {
-			t.Error("Obtener personas mal implementado")
-			break
-		}
-	}
-}
+// 	for i, palabra := range text.ObtenerPersonas() {
+// 		if palabra != esperada[i] {
+// 			t.Error("Obtener personas mal implementado")
+// 			break
+// 		}
+// 	}
+// }
 
 func TestNewTextoRep(t *testing.T) {
 	text := NewTextoRep("hola que tal!!, hola que tal!!", "")

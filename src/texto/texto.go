@@ -128,7 +128,7 @@ func (t *Texto) GetTextoPersona() []string {
 //ObtenerPersonas returns the allusions to people in a text
 func (t *Texto) ObtenerPersonas() []string {
 	var personas []string
-	diccionario, err := ioutil.ReadFile("./diccionario_propios.txt")
+	diccionario, err := ioutil.ReadFile("./src/diccionario_propios.txt")
 	Check(err)
 
 	sliceNombres := StringToSlice(string(diccionario))
