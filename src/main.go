@@ -28,7 +28,7 @@ func introducirTexto(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-redundantes?posicion=0
 func obtenerRedundantes(c *gin.Context) {
-	i := c.Param("posicion")
+	i := c.Query("posicion")
 
 	pos, _ := strconv.Atoi(i)
 
@@ -40,7 +40,7 @@ func obtenerRedundantes(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-sin-redundantes?posicion=0
 func obtenerSinRedundantes(c *gin.Context) {
-	i := c.Param("posicion")
+	i := c.Query("posicion")
 
 	pos, _ := strconv.Atoi(i)
 
@@ -52,7 +52,7 @@ func obtenerSinRedundantes(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-personas?posicion=0
 func obtenerPersonas(c *gin.Context) {
-	i := c.Param("posicion")
+	i := c.Query("posicion")
 
 	pos, _ := strconv.Atoi(i)
 
@@ -64,7 +64,7 @@ func obtenerPersonas(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-estadisticas?posicion=0
 func obtenerEstadisticas(c *gin.Context) {
-	i := c.Param("posicion")
+	i := c.Query("posicion")
 
 	pos, _ := strconv.Atoi(i)
 
