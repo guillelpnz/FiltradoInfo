@@ -8,6 +8,7 @@ require (
 	cloud.google.com/go/storage v1.12.0 // indirect
 	firebase.google.com/go v3.13.0+incompatible // indirect
 	github.com/aws/aws-lambda-go v1.20.0
+	github.com/edsrzf/mmap-go v1.0.0 // indirect
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
@@ -17,6 +18,8 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/technoweenie/multipartstreamer v1.0.1 // indirect
 	github.com/ugorji/go v1.2.1 // indirect
+	github.com/utahta/go-openuri v0.1.0
+	github.com/vektra/gitreader v0.0.0-20150106002542-abd11557f68c // indirect
 	golang.org/x/crypto v0.0.0-20201203163018-be400aefbc4c // indirect
 	golang.org/x/net v0.0.0-20201110031124-69a78807bb2b // indirect
 	golang.org/x/oauth2 v0.0.0-20201109201403-9fd604954f58 // indirect
