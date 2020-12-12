@@ -3,6 +3,8 @@ package main
 import (
 	// "fmt"
 
+	"strconv"
+
 	"github.com/guillelpnz/TextAnalyzer/src/micro"
 
 	"github.com/gin-gonic/gin"
@@ -10,6 +12,7 @@ import (
 
 var textos *micro.Textos
 
+// curl -d "contenido=mi nombre es Guillermo y esto es una prueba" -d "autor=Guillermo Lupiáñez Tapia" http://localhost:8080/introducir-texto
 func introducirTexto(c *gin.Context) {
 	contenido := c.PostForm("contenido")
 	autor := c.PostForm("autor")
@@ -21,6 +24,14 @@ func introducirTexto(c *gin.Context) {
 		"contenido": contenido,
 		"autor":     autor,
 	})
+}
+
+// curl http://localhost:8080/introducir-texto?posicion=0
+func obtenerRedundantes(c *gin.Context) {
+	i := c.Param("posicion")
+
+	pos, _ := strconv.Atoi(i)
+	textos.ObtenerRedundantes(pos)
 }
 
 // go get -u github.com/gin-gonic/gin
@@ -35,5 +46,7 @@ func main() {
 	})
 
 	router.POST("/introducir-texto", introducirTexto)
+
+	router.GET("/")
 	router.Run() // listen and serve on 0.0.0.0:8080
 }

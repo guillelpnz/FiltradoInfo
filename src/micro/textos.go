@@ -28,20 +28,44 @@ func (t *Textos) IntroducirTexto(contenido string, autor string) {
 
 // ObtenerRedundantes returns the repeated words in the text on i position
 func (t *Textos) ObtenerRedundantes(i int) []string {
-	return t.Get(i).ObtenerRedundantes()
+	if i >= 0 && i < len(t.array) {
+		return t.Get(i).ObtenerRedundantes()
+	} else {
+		array := make([]string, 0)
+		array = texto.StringToSlice("index out of array")
+		return array
+	}
 }
 
 // ObtenerPersonas returns the allusions to people on a text (Spanish names)
 func (t *Textos) ObtenerPersonas(i int) []string {
-	return t.Get(i).ObtenerPersonas()
+	if i >= 0 && i < len(t.array) {
+		return t.Get(i).ObtenerPersonas()
+	} else {
+		array := make([]string, 0)
+		array = texto.StringToSlice("index out of array")
+		return array
+	}
 }
 
 //ObtenerSinRedundantes returns the text in position i without repeated words
 func (t *Textos) ObtenerSinRedundantes(i int) []string {
-	return t.Get(i).ObtenerSinRedundantes()
+	if i >= 0 && i < len(t.array) {
+		return t.Get(i).ObtenerSinRedundantes()
+	} else {
+		array := make([]string, 0)
+		array = texto.StringToSlice("index out of array")
+		return array
+	}
 }
 
 //ObtenerEstadisticas returns the text in position i without repeated words
 func (t *Textos) ObtenerEstadisticas(i int) map[string]float32 {
-	return t.Get(i).ObtenerEstadisticas()
+	if i >= 0 && i < len(t.array) {
+		return t.Get(i).ObtenerEstadisticas()
+	} else {
+		array := make(map[string]float32, 0)
+		array["index out of array"] = 1
+		return array
+	}
 }
