@@ -45,8 +45,8 @@ func obtenerSinRedundantes(c *gin.Context) {
 	pos, _ := strconv.Atoi(i)
 
 	c.JSON(200, gin.H{
-		"mensaje":              "Texto analizado con éxito",
-		"palabras redundantes": textos.ObtenerSinRedundantes(pos),
+		"mensaje":               "Texto analizado con éxito",
+		"Texto sin redundantes": textos.ObtenerSinRedundantes(pos),
 	})
 }
 
@@ -57,8 +57,8 @@ func obtenerPersonas(c *gin.Context) {
 	pos, _ := strconv.Atoi(i)
 
 	c.JSON(200, gin.H{
-		"mensaje":              "Texto analizado con éxito",
-		"palabras redundantes": textos.ObtenerPersonas(pos),
+		"mensaje":  "Texto analizado con éxito",
+		"Personas": textos.ObtenerPersonas(pos),
 	})
 }
 
@@ -69,8 +69,8 @@ func obtenerEstadisticas(c *gin.Context) {
 	pos, _ := strconv.Atoi(i)
 
 	c.JSON(200, gin.H{
-		"mensaje":              "Texto analizado con éxito",
-		"palabras redundantes": textos.ObtenerEstadisticas(pos),
+		"mensaje":      "Texto analizado con éxito",
+		"Estadísticas": textos.ObtenerEstadisticas(pos),
 	})
 }
 
