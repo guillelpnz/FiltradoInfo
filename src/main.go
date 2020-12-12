@@ -26,12 +26,16 @@ func introducirTexto(c *gin.Context) {
 	})
 }
 
-// curl http://localhost:8080/introducir-texto?posicion=0
+// curl http://localhost:8080/obtener-redundantes?posicion=0
 func obtenerRedundantes(c *gin.Context) {
 	i := c.Param("posicion")
 
 	pos, _ := strconv.Atoi(i)
-	textos.ObtenerRedundantes(pos)
+
+	c.JSON(200, gin.H{
+		"mensaje":              "Texto analizado con éxito",
+		"palabras redundantes": textos.ObtenerRedundantes(pos),
+	})
 }
 
 // go get -u github.com/gin-gonic/gin
@@ -47,6 +51,6 @@ func main() {
 
 	router.POST("/introducir-texto", introducirTexto)
 
-	router.GET("/")
+	router.GET("/obtener-redundantes", obtenerRedundantes)
 	router.Run() // listen and serve on 0.0.0.0:8080
 }
