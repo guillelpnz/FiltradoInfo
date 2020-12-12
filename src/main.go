@@ -38,6 +38,42 @@ func obtenerRedundantes(c *gin.Context) {
 	})
 }
 
+// curl http://localhost:8080/obtener-sin-redundantes?posicion=0
+func obtenerSinRedundantes(c *gin.Context) {
+	i := c.Param("posicion")
+
+	pos, _ := strconv.Atoi(i)
+
+	c.JSON(200, gin.H{
+		"mensaje":              "Texto analizado con éxito",
+		"palabras redundantes": textos.ObtenerSinRedundantes(pos),
+	})
+}
+
+// curl http://localhost:8080/obtener-personas?posicion=0
+func obtenerPersonas(c *gin.Context) {
+	i := c.Param("posicion")
+
+	pos, _ := strconv.Atoi(i)
+
+	c.JSON(200, gin.H{
+		"mensaje":              "Texto analizado con éxito",
+		"palabras redundantes": textos.ObtenerPersonas(pos),
+	})
+}
+
+// curl http://localhost:8080/obtener-estadisticas?posicion=0
+func obtenerEstadisticas(c *gin.Context) {
+	i := c.Param("posicion")
+
+	pos, _ := strconv.Atoi(i)
+
+	c.JSON(200, gin.H{
+		"mensaje":              "Texto analizado con éxito",
+		"palabras redundantes": textos.ObtenerEstadisticas(pos),
+	})
+}
+
 // go get -u github.com/gin-gonic/gin
 func main() {
 	textos = micro.NewTextos()
@@ -52,5 +88,9 @@ func main() {
 	router.POST("/introducir-texto", introducirTexto)
 
 	router.GET("/obtener-redundantes", obtenerRedundantes)
+
+	router.GET("/obtener-sin-redundantes", obtenerSinRedundantes)
+	router.GET("/obtener-personas", obtenerPersonas)
+	router.GET("/obtener-estadisticas", obtenerEstadisticas)
 	router.Run() // listen and serve on 0.0.0.0:8080
 }
