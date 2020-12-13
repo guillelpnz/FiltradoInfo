@@ -4,7 +4,28 @@
 
 El proyecto consiste en una API REST programada en [Go](https://golang.org/) que revisa textos de todo tipo, pudiendo encontrar así redundancias en ellos, o hacer estadísticas sobre el uso del lenguaje en diferentes discursos. (Posiblemente acabe resolviendo algunos, ofreciendo sinónimos). El paquete principal del proyecto está [aquí](src/texto).
 
-## Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo
+## Justificación técnica del framework elegido
+
+He elegido el framework para microservicios [Gin](https://gin-gonic.com/), que se usa de una forma muy
+parecida a [Martini](https://github.com/go-martini/martini) (basado en Sinatra), pero puede llegar a ser hasta 40 veces más rápido. Otra alternativa era [Beego](https://beego.me/). Como para el uso que le voy a
+dar me servía cualquiera de estas, pero Gin tiene una muy buena documentación y es muy rápido, lo elegí.
+
+También podría no haber elegido ninguno, y quedarme con el paquete http que ya viene en el PATH de Go al
+instalarlo, sin embargo, me parece menos legible, al menos si ya has trabajado
+con microservicios con otros frameworks para otros lenguajes.
+
+## Originalidad
+
+He cambiado de lenguaje a Node para la anterior rúbrica, y he hecho un bot.
+
+He probado 3 sistemas de FaaS.
+
+Hice 2 bots en Google Cloud Functions, que aunque fueron fallidos, me sirvieron
+para entender más en profundidad el tema y dicha plataforma
+
+Programé una función correspondiente a una nueva HU, así como su test.
+
+<!-- ## Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo
 
 La conexión entre Vercel y mi GitHub está en [el ejercicio 1 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md)
 
@@ -58,18 +79,9 @@ El bot devuelve los títulos de los textos de celebridades. (HU4)
 En mi caso he recopilado algunos de Rafael Alberti y Federico García Lorca.
 
 Para más información sobre el funcionamiento del bot, así como la automatización
-de los pushes, se puede ver el [ejercicio 3 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md)
+de los pushes, se puede ver el [ejercicio 3 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md) -->
 
-## Originalidad
 
-He cambiado de lenguaje a Node para la anterior rúbrica, y he hecho un bot.
-
-He probado 3 sistemas de FaaS.
-
-Hice 2 bots en Google Cloud Functions, que aunque fueron fallidos, me sirvieron
-para entender más en profundidad el tema y dicha plataforma
-
-Programé una función correspondiente a una nueva HU, así como su test.
 
 <!-- ## Elección del contenedor base
 
