@@ -1,5 +1,5 @@
 run:
-	go run
+	go run src/main.go
 lint:
 	golangci-lint run
 test:
@@ -7,4 +7,4 @@ test:
 doc:
 	go doc ./src/texto
 build:
-	go build 
+	go build
