@@ -3,7 +3,7 @@ run:
 lint:
 	golangci-lint run
 test:
-	go test -v ./src/...
+	go test -v ./...
 doc:
 	go doc ./src/texto
 build:
