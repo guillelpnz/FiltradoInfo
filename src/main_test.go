@@ -2,78 +2,74 @@ package main
 
 import (
 	"net/http"
+	"net/http/httptest"
 	"testing"
 )
 
 func TestObtenerRedundantes(t *testing.T) {
-	go setupServer().Run()
-	resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
+	r := setupServer()
+	w := httptest.NewRecorder()
+	req, err := http.NewRequest("GET", "/obtener-redundantes?posicion=0", nil)
+
+	r.ServeHTTP(w, req)
+	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
 
 	if err != nil {
 		t.Fatalf("No se esperaba ningún error, se obtuvo %v", err)
 	}
 
-	if resp.StatusCode != 200 {
-		t.Fatalf("Se esperaba código 200, se obtuvo %v", resp.StatusCode)
-	}
-
-	_, ok := resp.Header["Content-Type"]
-
-	if !ok {
-		t.Fatalf("Se esperaba que el Content-Type estuviera establecido")
+	if w.Code != 200 {
+		t.Fatalf("Se esperaba código=200, se obtuvo %d", w.Code)
 	}
 }
 
 func TestObtenerSinRedundantes(t *testing.T) {
-	resp, err := http.Get("http://localhost:8080/obtener-sin-redundantes?posicion=0")
+	r := setupServer()
+	w := httptest.NewRecorder()
+	req, err := http.NewRequest("GET", "/obtener-sin-redundantes?posicion=0", nil)
+
+	r.ServeHTTP(w, req)
+	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
 
 	if err != nil {
 		t.Fatalf("No se esperaba ningún error, se obtuvo %v", err)
 	}
 
-	if resp.StatusCode != 200 {
-		t.Fatalf("Se esperaba código 200, se obtuvo %v", resp.StatusCode)
-	}
-
-	_, ok := resp.Header["Content-Type"]
-
-	if !ok {
-		t.Fatalf("Se esperaba que el Content-Type estuviera establecido")
+	if w.Code != 200 {
+		t.Fatalf("Se esperaba código=200, se obtuvo %d", w.Code)
 	}
 }
 
 func TestObtenerPersonas(t *testing.T) {
-	resp, err := http.Get("http://localhost:8080/obtener-personas?posicion=0")
+	r := setupServer()
+	w := httptest.NewRecorder()
+	req, err := http.NewRequest("GET", "/obtener-personas?posicion=0", nil)
+
+	r.ServeHTTP(w, req)
+	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
 
 	if err != nil {
 		t.Fatalf("No se esperaba ningún error, se obtuvo %v", err)
 	}
 
-	if resp.StatusCode != 200 {
-		t.Fatalf("Se esperaba código 200, se obtuvo %v", resp.StatusCode)
-	}
-
-	_, ok := resp.Header["Content-Type"]
-
-	if !ok {
-		t.Fatalf("Se esperaba que el Content-Type estuviera establecido")
+	if w.Code != 200 {
+		t.Fatalf("Se esperaba código=200, se obtuvo %d", w.Code)
 	}
 }
 
 func TestObtenerEstadisticas(t *testing.T) {
-	resp, err := http.Get("http://localhost:8080/obtener-estadisticas?posicion=0")
+	r := setupServer()
+	w := httptest.NewRecorder()
+	req, err := http.NewRequest("GET", "/obtener-estadisticas?posicion=0", nil)
+
+	r.ServeHTTP(w, req)
+	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
 
 	if err != nil {
 		t.Fatalf("No se esperaba ningún error, se obtuvo %v", err)
 	}
 
-	if resp.StatusCode != 200 {
-		t.Fatalf("Se esperaba código 200, se obtuvo %v", resp.StatusCode)
-	}
-
-	_, ok := resp.Header["Content-Type"]
-
-	if !ok {
-		t.Fatalf("Se esperaba que el Content-Type estuviera establecido")
+	if w.Code != 200 {
+		t.Fatalf("Se esperaba código=200, se obtuvo %d", w.Code)
 	}
 }
