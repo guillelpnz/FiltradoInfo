@@ -3,3 +3,4 @@ lenguaje: go
 test: src/texto/texto_test.go
 taskfile: Makefile
 URL: https://text-analyzer.vercel.app/api/obtener-sin-redundantes/?p=¡¡texto con con con palabras palabras repetidas!!
+make: make test
