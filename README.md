@@ -14,16 +14,40 @@ También podría no haber elegido ninguno, y quedarme con el paquete http que ya
 instalarlo, sin embargo, me parece menos legible, al menos si ya has trabajado
 con microservicios con otros frameworks para otros lenguajes.
 
-## Originalidad
+## Diseño en general del API
 
-He cambiado de lenguaje a Node para la anterior rúbrica, y he hecho un bot.
+He implementado 5 HU en forma de distintas acciones que hacer con los endpoints:
 
-He probado 3 sistemas de FaaS.
+- introducirTexto (HU8) -> Mediante una petición POST se envían datos como si de un formulario
+se tratara, añadiendo al vector de la clase handler (textos) un nuevo objeto texto
 
-Hice 2 bots en Google Cloud Functions, que aunque fueron fallidos, me sirvieron
-para entender más en profundidad el tema y dicha plataforma
+- obtenerRedundantes (HU1) -> Se busca uno de los textos del array y se obtienen las palabras repetidas
 
-Programé una función correspondiente a una nueva HU, así como su test.
+- obtenerSinRedundantes (HU5) -> Se busca uno de los textos del array y se obtiene limpiando palabras repetidas
+
+- obtenerPersonas (HU3) -> Se busca uno de los textos del array y se obtienen las alusiones a personas
+
+- obtenerEstadisticas (HU7) -> Se busca uno de los textos del array y se obtienen las frecuencias relativas de aparición de las palabras dentro del texto
+
+Cada una de estas HU tiene una ruta diferente dentro de la app. Están en [main.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/main.go)
+
+Se procesan llamando a funciones de mi clase manejadora que está en [textos.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos.go). Estas hacen uso de funciones de mi api
+previamente programadas.
+
+Con respecto a los tests, los ejecuto sin correr el servicio, usando el paquete httptest. Tengo el archivo
+[main_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/main_test.go) y [textos_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos_test.go)
+
+## Buenas prácticas
+
+No he hecho la configuración distribuida, pero sí que tengo un log (gin gonic proporciona uno)
+que se puede observar en la ejecución de tests, o si se corre la app y se le hacen peticiones.
+
+También he hecho un middleware, que usa las HU que tenía programadas, pero usando las peticiones http propuestas, las rutas y como almacenamiento un vector. Este es el fichero que contiene la clase, así como
+las funciones que se llaman cuando se hace routing: [textos.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos.go)
+
+## Tests correctos y de acuerdo con las historias de usuario
+
+En mi fichero [textos_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos_test.go), hago tests para ver que funciona de manera correcta el array. Los tests de integración se hacen en el fichero [main_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/main_test.go). Ahí hago peticiones http y compruebo que la salida es la esperada.
 
 <!-- ## Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo
 
