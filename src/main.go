@@ -75,15 +75,11 @@ func obtenerEstadisticas(c *gin.Context) {
 }
 
 // go get -u github.com/gin-gonic/gin
-func main() {
+
+func setupServer() *gin.Engine {
 	textos = micro.NewTextos()
 
 	router := gin.Default()
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
 
 	router.POST("/introducir-texto", introducirTexto)
 
@@ -92,5 +88,10 @@ func main() {
 	router.GET("/obtener-sin-redundantes", obtenerSinRedundantes)
 	router.GET("/obtener-personas", obtenerPersonas)
 	router.GET("/obtener-estadisticas", obtenerEstadisticas)
-	router.Run() // listen and serve on 0.0.0.0:8080
+
+	return router
+}
+
+func main() {
+	setupServer().Run() // listen and serve on 0.0.0.0:8080
 }

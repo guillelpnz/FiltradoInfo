@@ -6,6 +6,7 @@ import (
 )
 
 func TestObtenerRedundantes(t *testing.T) {
+	go setupServer().Run()
 	resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
 
 	if err != nil {
