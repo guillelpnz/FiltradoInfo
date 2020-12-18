@@ -12,7 +12,7 @@ func TestIntroducirTexto(t *testing.T) {
 	w := httptest.NewRecorder()
 
 	param := strings.NewReader("autor=Guillermo Lupiáñez Tapia&contenido=mi nombre es Guillermo Guillermo y esto es una prueba")
-	req, err := http.NewRequest("POST", "/introducir-texto", param)
+	req, err := http.NewRequest("POST", "/texto", param)
 
 	if err != nil {
 		t.Fatalf("No se esperaba ningún error, se obtuvo %v", err)

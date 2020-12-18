@@ -52,7 +52,7 @@ func obtenerSinRedundantes(c *gin.Context) {
 	})
 }
 
-// curl http://localhost:8080/obtener-personas?posicion=0
+// curl http://localhost:8080/texto/:id/:redundantes
 func obtenerPersonas(c *gin.Context) {
 	i := c.Query("posicion")
 
@@ -88,11 +88,11 @@ func setupServer() *gin.Engine {
 
 	router.POST("/texto", introducirTexto)
 
-	router.GET("/texto/:id/redundantes", obtenerRedundantes)
+	router.GET("/texto/:id/:redundantes", obtenerRedundantes)
 
-	router.GET("/texto/:id/sin-redundantes", obtenerSinRedundantes)
-	router.GET("/texto/:id/personas", obtenerPersonas)
-	router.GET("/texto/:id/estadisticas", obtenerEstadisticas)
+	router.GET("/texto/:id/:sin-redundantes", obtenerSinRedundantes)
+	router.GET("/texto/:id/:personas", obtenerPersonas)
+	router.GET("/texto/:id/:estadisticas", obtenerEstadisticas)
 
 	return router
 }
