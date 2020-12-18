@@ -36,7 +36,7 @@ func TestIntroducirTexto(t *testing.T) {
 func TestObtenerRedundantes(t *testing.T) {
 	r := setupServer()
 	w := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/obtener-redundantes?posicion=0", nil)
+	req, err := http.NewRequest("GET", "/texto/0/redundantes", nil)
 
 	r.ServeHTTP(w, req)
 	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
