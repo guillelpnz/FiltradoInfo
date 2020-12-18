@@ -54,7 +54,7 @@ func obtenerSinRedundantes(c *gin.Context) {
 
 // curl http://localhost:8080/texto/:id/:redundantes
 func obtenerPersonas(c *gin.Context) {
-	i := c.Query("posicion")
+	i := c.Param("id")
 
 	pos, _ := strconv.Atoi(i)
 

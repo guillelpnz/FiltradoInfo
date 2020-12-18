@@ -82,7 +82,7 @@ func TestObtenerSinRedundantes(t *testing.T) {
 func TestObtenerPersonas(t *testing.T) {
 	r := setupServer()
 	w := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/obtener-personas?posicion=0", nil)
+	req, err := http.NewRequest("GET", "/texto/0/personas", nil)
 
 	r.ServeHTTP(w, req)
 	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")
