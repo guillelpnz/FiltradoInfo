@@ -105,8 +105,6 @@ En mi caso he recopilado algunos de Rafael Alberti y Federico García Lorca.
 Para más información sobre el funcionamiento del bot, así como la automatización
 de los pushes, se puede ver el [ejercicio 3 del tema](https://github.com/guillelpnz/Ejercicios/blob/master/Serverless/serverless.md) -->
 
-
-
 <!-- ## Elección del contenedor base
 
 Como contenedor base he elegido golang:alpine3.12. He tomado esta decisión porque
