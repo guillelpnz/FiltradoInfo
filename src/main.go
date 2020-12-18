@@ -88,11 +88,11 @@ func setupServer() *gin.Engine {
 
 	router.POST("/texto", introducirTexto)
 
-	router.GET("/texto/:id/:redundantes", obtenerRedundantes)
+	router.GET("/texto/:id/redundantes", obtenerRedundantes)
 
-	router.GET("/texto/:id/:sin-redundantes", obtenerSinRedundantes)
-	router.GET("/texto/:id/:personas", obtenerPersonas)
-	router.GET("/texto/:id/:estadisticas", obtenerEstadisticas)
+	router.GET("/texto/:id/sin-redundantes", obtenerSinRedundantes)
+	router.GET("/texto/:id/personas", obtenerPersonas)
+	router.GET("/texto/:id/estadisticas", obtenerEstadisticas)
 
 	return router
 }
