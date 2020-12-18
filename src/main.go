@@ -3,7 +3,9 @@ package main
 import (
 	// "fmt"
 
+	"log"
 	"strconv"
+	"time"
 
 	"github.com/guillelpnz/TextAnalyzer/src/micro"
 
@@ -78,8 +80,11 @@ func obtenerEstadisticas(c *gin.Context) {
 
 func setupServer() *gin.Engine {
 	textos = micro.NewTextos()
+	router := gin.New()
+	gin.SetMode(gin.ReleaseMode)
+	//router := gin.Default()
 
-	router := gin.Default()
+	router.Use(Logger())
 
 	router.POST("/introducir-texto", introducirTexto)
 
@@ -90,6 +95,24 @@ func setupServer() *gin.Engine {
 	router.GET("/obtener-estadisticas", obtenerEstadisticas)
 
 	return router
+}
+
+// Logger is a custom Middleware to log TextAnalyzer api
+func Logger() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		t := time.Now()
+		path := c.Request.URL.Path
+
+		c.Next()
+
+		latency := time.Since(t)
+		status := c.Writer.Status()
+		method := c.Request.Method
+		errors := c.Errors.String()
+
+		log.Printf("Latencia: %s, Código: %v, Path: %s", latency, status, path)
+		log.Printf("Tipo de petición: %s, Errores: %s", method, errors)
+	}
 }
 
 func main() {

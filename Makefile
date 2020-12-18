@@ -5,6 +5,6 @@ build:
 install:
 	
 test:
-	go test -v ./...
+	go test -v ./src/...
 doc:
 	go doc ./src/texto
