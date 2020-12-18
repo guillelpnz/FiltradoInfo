@@ -105,7 +105,7 @@ func TestObtenerPersonas(t *testing.T) {
 func TestObtenerEstadisticas(t *testing.T) {
 	r := setupServer()
 	w := httptest.NewRecorder()
-	req, err := http.NewRequest("GET", "/obtener-estadisticas?posicion=0", nil)
+	req, err := http.NewRequest("GET", "/texto/0/estadisticas", nil)
 
 	r.ServeHTTP(w, req)
 	//resp, err := http.Get("http://localhost:8080/obtener-redundantes?posicion=0")

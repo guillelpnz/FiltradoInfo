@@ -66,7 +66,7 @@ func obtenerPersonas(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-estadisticas?posicion=0
 func obtenerEstadisticas(c *gin.Context) {
-	i := c.Query("posicion")
+	i := c.Param("id")
 
 	pos, _ := strconv.Atoi(i)
 
