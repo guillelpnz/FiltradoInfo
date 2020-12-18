@@ -7,12 +7,16 @@ El proyecto consiste en una API REST programada en [Go](https://golang.org/) que
 ## Justificación técnica del framework elegido
 
 He elegido el framework para microservicios [Gin](https://gin-gonic.com/), que se usa de una forma muy
-parecida a [Martini](https://github.com/go-martini/martini) (basado en Sinatra), pero puede llegar a ser hasta 40 veces más rápido. Otra alternativa era [Beego](https://beego.me/). Como para el uso que le voy a
+parecida a [Martini](https://github.com/go-martini/martini) (basado en Sinatra), pero puede llegar a ser hasta 40 veces más rápido.
+
+Otra alternativa era [Beego](https://beego.me/). Como para el uso que le voy a
 dar me servía cualquiera de estas, pero Gin tiene una muy buena documentación y es muy rápido, lo elegí.
 
 También podría no haber elegido ninguno, y quedarme con el paquete http que ya viene en el PATH de Go al
 instalarlo, sin embargo, me parece menos legible, al menos si ya has trabajado
 con microservicios con otros frameworks para otros lenguajes.
+
+Los datos de los distintos benchmarks hechos están en este enlace: [link a la página oficial de gin gonic](https://github.com/gin-gonic/gin#benchmarks).
 
 ## Diseño en general del API
 
@@ -39,15 +43,21 @@ Con respecto a los tests, los ejecuto sin correr el servicio, usando el paquete 
 
 ## Buenas prácticas
 
-No he hecho la configuración distribuida, pero sí que tengo un log (gin gonic proporciona uno)
-que se puede observar en la ejecución de tests, o si se corre la app y se le hacen peticiones.
+No he hecho la configuración distribuida, pero sí que he implementado un log personalizado.
+Está en [el fichero main](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/main.go) línea 100:
 
-También he hecho un middleware, que usa las HU que tenía programadas, pero usando las peticiones http propuestas, las rutas y como almacenamiento un vector. Este es el fichero que contiene la clase, así como
+Cabecera: func Logger() gin.HandlerFunc
+
+Como se puede observar, es un MiddleWare por el tipo devuelto.
+
+También he hecho una clase Handler, que usa las HU que tenía programadas, pero usando las peticiones http propuestas, las rutas y como almacenamiento un vector. Este es el fichero que contiene la clase, así como
 las funciones que se llaman cuando se hace routing: [textos.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos.go)
 
 ## Tests correctos y de acuerdo con las historias de usuario
 
 En mi fichero [textos_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/micro/textos_test.go), hago tests para ver que funciona de manera correcta el array. Los tests de integración se hacen en el fichero [main_test.go](https://github.com/guillelpnz/TextAnalyzer/blob/master/src/main_test.go). Ahí hago peticiones http y compruebo que la salida es la esperada.
+
+Los tests hechos están enlazados mediante commits a las historias de usuario.
 
 <!-- ## Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo
 
