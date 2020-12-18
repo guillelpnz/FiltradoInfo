@@ -14,7 +14,7 @@ import (
 
 var textos *micro.Textos
 
-// curl -d "contenido=mi nombre es Guillermo y esto es una prueba" -d "autor=Guillermo Lupiáñez Tapia" http://localhost:8080/introducir-texto
+// curl -d "contenido=mi nombre es Guillermo y esto es una prueba" -d "autor=Guillermo Lupiáñez Tapia" http://localhost:8080/texto
 func introducirTexto(c *gin.Context) {
 	contenido := c.PostForm("contenido")
 	autor := c.PostForm("autor")
@@ -86,13 +86,13 @@ func setupServer() *gin.Engine {
 
 	router.Use(Logger())
 
-	router.POST("/introducir-texto", introducirTexto)
+	router.POST("/texto", introducirTexto)
 
-	router.GET("/obtener-redundantes", obtenerRedundantes)
+	router.GET("/texto/:id/redundantes", obtenerRedundantes)
 
-	router.GET("/obtener-sin-redundantes", obtenerSinRedundantes)
-	router.GET("/obtener-personas", obtenerPersonas)
-	router.GET("/obtener-estadisticas", obtenerEstadisticas)
+	router.GET("/texto/:id/sin-redundantes", obtenerSinRedundantes)
+	router.GET("/texto/:id/personas", obtenerPersonas)
+	router.GET("/texto/:id/estadisticas", obtenerEstadisticas)
 
 	return router
 }
