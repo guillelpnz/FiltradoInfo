@@ -42,7 +42,7 @@ func obtenerRedundantes(c *gin.Context) {
 
 // curl http://localhost:8080/obtener-sin-redundantes?posicion=0
 func obtenerSinRedundantes(c *gin.Context) {
-	i := c.Query("posicion")
+	i := c.Param("id")
 
 	pos, _ := strconv.Atoi(i)
 
